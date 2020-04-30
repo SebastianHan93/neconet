@@ -3,6 +3,7 @@
 //
 
 #include "CCountDownLatch.h"
+using namespace neco;
 
 CCountDownLatch::CCountDownLatch(int iCount)
 :m_clsMutex(),m_clsCondition(m_clsMutex),m_iCount(m_iCount)

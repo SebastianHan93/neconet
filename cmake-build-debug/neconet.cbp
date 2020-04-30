@@ -84,6 +84,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/hc/CLionProjects/neconet/base/CAtomic.h">
+			<Option target="neconet"/>
+		</Unit>
 		<Unit filename="/home/hc/CLionProjects/neconet/base/CCondition.cpp">
 			<Option target="neconet"/>
 		</Unit>
@@ -94,6 +97,9 @@
 			<Option target="neconet"/>
 		</Unit>
 		<Unit filename="/home/hc/CLionProjects/neconet/base/CCountDownLatch.h">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/base/CCurrentThread.cpp">
 			<Option target="neconet"/>
 		</Unit>
 		<Unit filename="/home/hc/CLionProjects/neconet/base/CMutex.cpp">

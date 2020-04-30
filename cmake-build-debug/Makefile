@@ -177,6 +177,33 @@ base/CCountDownLatch.cpp.s:
 	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/base/CCountDownLatch.cpp.s
 .PHONY : base/CCountDownLatch.cpp.s
 
+base/CCurrentThread.o: base/CCurrentThread.cpp.o
+
+.PHONY : base/CCurrentThread.o
+
+# target to build an object file
+base/CCurrentThread.cpp.o:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/base/CCurrentThread.cpp.o
+.PHONY : base/CCurrentThread.cpp.o
+
+base/CCurrentThread.i: base/CCurrentThread.cpp.i
+
+.PHONY : base/CCurrentThread.i
+
+# target to preprocess a source file
+base/CCurrentThread.cpp.i:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/base/CCurrentThread.cpp.i
+.PHONY : base/CCurrentThread.cpp.i
+
+base/CCurrentThread.s: base/CCurrentThread.cpp.s
+
+.PHONY : base/CCurrentThread.s
+
+# target to generate assembly for a file
+base/CCurrentThread.cpp.s:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/base/CCurrentThread.cpp.s
+.PHONY : base/CCurrentThread.cpp.s
+
 base/CMutex.o: base/CMutex.cpp.o
 
 .PHONY : base/CMutex.o
@@ -273,6 +300,9 @@ help:
 	@echo "... base/CCountDownLatch.o"
 	@echo "... base/CCountDownLatch.i"
 	@echo "... base/CCountDownLatch.s"
+	@echo "... base/CCurrentThread.o"
+	@echo "... base/CCurrentThread.i"
+	@echo "... base/CCurrentThread.s"
 	@echo "... base/CMutex.o"
 	@echo "... base/CMutex.i"
 	@echo "... base/CMutex.s"

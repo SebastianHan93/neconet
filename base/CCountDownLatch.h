@@ -10,18 +10,22 @@
 #include "CMutex.h"
 #include "CCondition.h"
 
-class CCountDownLatch : noncopyable{
-public:
-    explicit CCountDownLatch(int iCount);
-    void Wait();
-    void CountDown();
-    int GetCount() const;
+namespace neco
+{
+    class CCountDownLatch : noncopyable{
+    public:
+        explicit CCountDownLatch(int iCount);
+        void Wait();
+        void CountDown();
+        int GetCount() const;
 
-private:
-    mutable CMutexLock m_clsMutex;
-    CCondition m_clsCondition GUARDED_BY(m_clsMutex);
-    int m_iCount GUARDED_BY(m_clsMutex);
-};
+    private:
+        mutable CMutexLock m_clsMutex;
+        CCondition m_clsCondition GUARDED_BY(m_clsMutex);
+        int m_iCount GUARDED_BY(m_clsMutex);
+    };
+}
+
 
 
 #endif //NECONET_CCOUNTDOWNLATCH_H

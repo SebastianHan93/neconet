@@ -5,23 +5,24 @@
 #include <stdint-gcc.h>
 #include <cerrno>
 #include "CCondition.h"
-CCondition::CCondition(CMutexLock & rMutexLock):m_rMutex(rMutexLock)
+
+neco::CCondition::CCondition(CMutexLock & rMutexLock):m_rMutex(rMutexLock)
 {
     MCHECK(pthread_cond_init(&m_pctCond,NULL));
 }
 
-CCondition::~CCondition()
+neco::CCondition::~CCondition()
 {
     MCHECK(pthread_cond_destroy(&m_pctCond));
 }
 
-void CCondition::Wait()
+void neco::CCondition::Wait()
 {
     CMutexLock::CUnassignGuard ug(m_rMutex);
     MCHECK(pthread_cond_wait(&m_pctCond,m_rMutex.GetPthreadMutex()));
 }
 
-bool CCondition::WaitForSeconds(double dSeconds)
+bool neco::CCondition::WaitForSeconds(double dSeconds)
 {
     struct timespec abstime;
     clock_gettime(CLOCK_REALTIME,&abstime);
@@ -33,12 +34,12 @@ bool CCondition::WaitForSeconds(double dSeconds)
     return ETIMEDOUT == pthread_cond_timedwait(&m_pctCond,m_rMutex.GetPthreadMutex(),&abstime);
 }
 
-void CCondition::Notify()
+void neco::CCondition::Notify()
 {
     MCHECK(pthread_cond_signal(&m_pctCond));
 }
 
-void CCondition::NotifyAll()
+void neco::CCondition::NotifyAll()
 {
     MCHECK(pthread_cond_broadcast(&m_pctCond));
 }

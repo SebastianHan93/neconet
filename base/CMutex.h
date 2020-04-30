@@ -97,49 +97,53 @@ __END_DECLS
 
 #endif // CHECK_PTHREAD_RETURN_VALUE
 
-class CAPABILITY("mutex") CMutexLock:noncopyable {
-public:
-    CMutexLock();
-    ~CMutexLock();
-
-    bool IslockedByThisThread() const ;
-    void AssertLocked() const ASSERT_CAPABILITY(this);
-    void Lock() ACQUIRE();
-    void Unlock() RELEASE();
-    pthread_mutex_t * GetPthreadMutex();
-
-private:
-    class CUnassignGuard:noncopyable
-    {
+namespace neco
+{
+    class CAPABILITY("mutex") CMutexLock:noncopyable {
     public:
-        explicit CUnassignGuard(CMutexLock& clsOwner);
+        CMutexLock();
+        ~CMutexLock();
 
-        ~CUnassignGuard();
+        bool IslockedByThisThread() const ;
+        void AssertLocked() const ASSERT_CAPABILITY(this);
+        void Lock() ACQUIRE();
+        void Unlock() RELEASE();
+        pthread_mutex_t * GetPthreadMutex();
 
     private:
-        CMutexLock& m_rOwner;
+        class CUnassignGuard:noncopyable
+        {
+        public:
+            explicit CUnassignGuard(CMutexLock& clsOwner);
+
+            ~CUnassignGuard();
+
+        private:
+            CMutexLock& m_rOwner;
+        };
+
+    private:
+        void UnassignHolder();
+        void AssignHolder();
+
+
+    private:
+
+        friend class CCondition;
+        pthread_mutex_t m_Mutex;
+        pid_t m_pidHolder;
     };
 
-private:
-    void UnassignHolder();
-    void AssignHolder();
+    class SCOPED_CAPABILITY CMutexLockGuard : noncopyable
+    {
+    public:
+        explicit CMutexLockGuard(CMutexLock& cMutexLock) ACQUIRE(cMutexLock);
+        ~CMutexLockGuard() RELEASE();
+    private:
+        CMutexLock & m_rMutexlock;
+    };
+}
 
-
-private:
-
-    friend class CCondition;
-    pthread_mutex_t m_Mutex;
-    pid_t m_pidHolder;
-};
-
-class SCOPED_CAPABILITY CMutexLockGuard : noncopyable
-{
-public:
-    explicit CMutexLockGuard(CMutexLock& cMutexLock) ACQUIRE(cMutexLock);
-    ~CMutexLockGuard() RELEASE();
-private:
-    CMutexLock & m_rMutexlock;
-};
 
 //#define CMutexLockGuard(x) error "Missing guard object name"
 #endif //NECONET_CMUTEX_H
