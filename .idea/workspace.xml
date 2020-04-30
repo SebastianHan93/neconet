@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="neconet" targetName="neconet" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2f242af7-8ac2-4afc-862b-a55c7ec52c13" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ProjectId" id="1b9XS7JAD2VHOtYFPoHxQmLbsS3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="neconet" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="neconet" TARGET_NAME="neconet" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="neconet" RUN_TARGET_NAME="neconet">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2f242af7-8ac2-4afc-862b-a55c7ec52c13" name="Default Changelist" comment="" />
+      <created>1588045279486</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588045279486</updated>
+      <workItem from="1588045281999" duration="9543000" />
+      <workItem from="1588208411340" duration="14012000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1599" height="278" key="GridCell.Tab.0.bottom" timestamp="1588063787830">
+      <screen x="67" y="27" width="1651" height="899" />
+    </state>
+    <state width="1599" height="278" key="GridCell.Tab.0.bottom/67.27.1651.899@67.27.1651.899" timestamp="1588063787830" />
+    <state width="1599" height="278" key="GridCell.Tab.0.center" timestamp="1588063787830">
+      <screen x="67" y="27" width="1651" height="899" />
+    </state>
+    <state width="1599" height="278" key="GridCell.Tab.0.center/67.27.1651.899@67.27.1651.899" timestamp="1588063787830" />
+    <state width="1599" height="278" key="GridCell.Tab.0.left" timestamp="1588063787830">
+      <screen x="67" y="27" width="1651" height="899" />
+    </state>
+    <state width="1599" height="278" key="GridCell.Tab.0.left/67.27.1651.899@67.27.1651.899" timestamp="1588063787830" />
+    <state width="1599" height="278" key="GridCell.Tab.0.right" timestamp="1588063787830">
+      <screen x="67" y="27" width="1651" height="899" />
+    </state>
+    <state width="1599" height="278" key="GridCell.Tab.0.right/67.27.1651.899@67.27.1651.899" timestamp="1588063787830" />
+    <state x="537" y="303" key="com.intellij.ide.util.TipDialog" timestamp="1588208415755">
+      <screen x="67" y="27" width="1651" height="899" />
+    </state>
+    <state x="537" y="303" key="com.intellij.ide.util.TipDialog/67.27.1651.899@67.27.1651.899" timestamp="1588208415755" />
+  </component>
+</project>
