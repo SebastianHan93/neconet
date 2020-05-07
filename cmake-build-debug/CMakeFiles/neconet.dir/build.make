@@ -122,18 +122,44 @@ CMakeFiles/neconet.dir/base/CCondition.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neconet.dir/base/CCondition.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hc/CLionProjects/neconet/base/CCondition.cpp -o CMakeFiles/neconet.dir/base/CCondition.cpp.s
 
-CMakeFiles/neconet.dir/base/CCurrentThread.cpp.o: CMakeFiles/neconet.dir/flags.make
-CMakeFiles/neconet.dir/base/CCurrentThread.cpp.o: ../base/CCurrentThread.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/neconet.dir/base/CCurrentThread.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neconet.dir/base/CCurrentThread.cpp.o -c /home/hc/CLionProjects/neconet/base/CCurrentThread.cpp
+CMakeFiles/neconet.dir/base/CurrentThread.cpp.o: CMakeFiles/neconet.dir/flags.make
+CMakeFiles/neconet.dir/base/CurrentThread.cpp.o: ../base/CurrentThread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/neconet.dir/base/CurrentThread.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neconet.dir/base/CurrentThread.cpp.o -c /home/hc/CLionProjects/neconet/base/CurrentThread.cpp
 
-CMakeFiles/neconet.dir/base/CCurrentThread.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neconet.dir/base/CCurrentThread.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hc/CLionProjects/neconet/base/CCurrentThread.cpp > CMakeFiles/neconet.dir/base/CCurrentThread.cpp.i
+CMakeFiles/neconet.dir/base/CurrentThread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neconet.dir/base/CurrentThread.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hc/CLionProjects/neconet/base/CurrentThread.cpp > CMakeFiles/neconet.dir/base/CurrentThread.cpp.i
 
-CMakeFiles/neconet.dir/base/CCurrentThread.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neconet.dir/base/CCurrentThread.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hc/CLionProjects/neconet/base/CCurrentThread.cpp -o CMakeFiles/neconet.dir/base/CCurrentThread.cpp.s
+CMakeFiles/neconet.dir/base/CurrentThread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neconet.dir/base/CurrentThread.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hc/CLionProjects/neconet/base/CurrentThread.cpp -o CMakeFiles/neconet.dir/base/CurrentThread.cpp.s
+
+CMakeFiles/neconet.dir/base/CThreadData.cpp.o: CMakeFiles/neconet.dir/flags.make
+CMakeFiles/neconet.dir/base/CThreadData.cpp.o: ../base/CThreadData.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/neconet.dir/base/CThreadData.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neconet.dir/base/CThreadData.cpp.o -c /home/hc/CLionProjects/neconet/base/CThreadData.cpp
+
+CMakeFiles/neconet.dir/base/CThreadData.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neconet.dir/base/CThreadData.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hc/CLionProjects/neconet/base/CThreadData.cpp > CMakeFiles/neconet.dir/base/CThreadData.cpp.i
+
+CMakeFiles/neconet.dir/base/CThreadData.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neconet.dir/base/CThreadData.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hc/CLionProjects/neconet/base/CThreadData.cpp -o CMakeFiles/neconet.dir/base/CThreadData.cpp.s
+
+CMakeFiles/neconet.dir/base/CException.cpp.o: CMakeFiles/neconet.dir/flags.make
+CMakeFiles/neconet.dir/base/CException.cpp.o: ../base/CException.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/neconet.dir/base/CException.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neconet.dir/base/CException.cpp.o -c /home/hc/CLionProjects/neconet/base/CException.cpp
+
+CMakeFiles/neconet.dir/base/CException.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neconet.dir/base/CException.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hc/CLionProjects/neconet/base/CException.cpp > CMakeFiles/neconet.dir/base/CException.cpp.i
+
+CMakeFiles/neconet.dir/base/CException.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neconet.dir/base/CException.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hc/CLionProjects/neconet/base/CException.cpp -o CMakeFiles/neconet.dir/base/CException.cpp.s
 
 # Object files for target neconet
 neconet_OBJECTS = \
@@ -142,7 +168,9 @@ neconet_OBJECTS = \
 "CMakeFiles/neconet.dir/base/CCountDownLatch.cpp.o" \
 "CMakeFiles/neconet.dir/base/CMutex.cpp.o" \
 "CMakeFiles/neconet.dir/base/CCondition.cpp.o" \
-"CMakeFiles/neconet.dir/base/CCurrentThread.cpp.o"
+"CMakeFiles/neconet.dir/base/CurrentThread.cpp.o" \
+"CMakeFiles/neconet.dir/base/CThreadData.cpp.o" \
+"CMakeFiles/neconet.dir/base/CException.cpp.o"
 
 # External object files for target neconet
 neconet_EXTERNAL_OBJECTS =
@@ -152,10 +180,12 @@ neconet: CMakeFiles/neconet.dir/base/CThread.cpp.o
 neconet: CMakeFiles/neconet.dir/base/CCountDownLatch.cpp.o
 neconet: CMakeFiles/neconet.dir/base/CMutex.cpp.o
 neconet: CMakeFiles/neconet.dir/base/CCondition.cpp.o
-neconet: CMakeFiles/neconet.dir/base/CCurrentThread.cpp.o
+neconet: CMakeFiles/neconet.dir/base/CurrentThread.cpp.o
+neconet: CMakeFiles/neconet.dir/base/CThreadData.cpp.o
+neconet: CMakeFiles/neconet.dir/base/CException.cpp.o
 neconet: CMakeFiles/neconet.dir/build.make
 neconet: CMakeFiles/neconet.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable neconet"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable neconet"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/neconet.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

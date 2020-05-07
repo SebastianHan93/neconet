@@ -99,7 +99,10 @@
 		<Unit filename="/home/hc/CLionProjects/neconet/base/CCountDownLatch.h">
 			<Option target="neconet"/>
 		</Unit>
-		<Unit filename="/home/hc/CLionProjects/neconet/base/CCurrentThread.cpp">
+		<Unit filename="/home/hc/CLionProjects/neconet/base/CException.cpp">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/base/CException.h">
 			<Option target="neconet"/>
 		</Unit>
 		<Unit filename="/home/hc/CLionProjects/neconet/base/CMutex.cpp">
@@ -114,7 +117,19 @@
 		<Unit filename="/home/hc/CLionProjects/neconet/base/CThread.h">
 			<Option target="neconet"/>
 		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/base/CThreadData.cpp">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/base/CThreadData.h">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/base/CurrentThread.cpp">
+			<Option target="neconet"/>
+		</Unit>
 		<Unit filename="/home/hc/CLionProjects/neconet/base/CurrentThread.h">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/base/Types.h">
 			<Option target="neconet"/>
 		</Unit>
 		<Unit filename="/home/hc/CLionProjects/neconet/base/noncopyable.h">

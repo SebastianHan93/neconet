@@ -6,9 +6,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/hc/CLionProjects/neconet/base/CCondition.cpp" "/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles/neconet.dir/base/CCondition.cpp.o"
   "/home/hc/CLionProjects/neconet/base/CCountDownLatch.cpp" "/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles/neconet.dir/base/CCountDownLatch.cpp.o"
-  "/home/hc/CLionProjects/neconet/base/CCurrentThread.cpp" "/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles/neconet.dir/base/CCurrentThread.cpp.o"
+  "/home/hc/CLionProjects/neconet/base/CException.cpp" "/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles/neconet.dir/base/CException.cpp.o"
   "/home/hc/CLionProjects/neconet/base/CMutex.cpp" "/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles/neconet.dir/base/CMutex.cpp.o"
   "/home/hc/CLionProjects/neconet/base/CThread.cpp" "/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles/neconet.dir/base/CThread.cpp.o"
+  "/home/hc/CLionProjects/neconet/base/CThreadData.cpp" "/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles/neconet.dir/base/CThreadData.cpp.o"
+  "/home/hc/CLionProjects/neconet/base/CurrentThread.cpp" "/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles/neconet.dir/base/CurrentThread.cpp.o"
   "/home/hc/CLionProjects/neconet/main.cpp" "/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles/neconet.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -26,7 +26,7 @@ namespace neco
     public:
         void Start();
         int ThreadJoin();
-        bool Started() const ;
+        bool IsStarted() const ;
         pthread_t GetTid() const ;
         const string& GetName() const;
         static int NumCreated();

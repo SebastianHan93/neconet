@@ -3,7 +3,7 @@
 
 int main ()
 {
-//    std::map<char,int> mymap;
+    std::map<char,int> mymap;
 //
 //    // first insert function version (single parameter):
 //    mymap.insert ( std::pair<char,int>('a',100) );

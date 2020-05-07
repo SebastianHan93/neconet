@@ -177,32 +177,32 @@ base/CCountDownLatch.cpp.s:
 	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/base/CCountDownLatch.cpp.s
 .PHONY : base/CCountDownLatch.cpp.s
 
-base/CCurrentThread.o: base/CCurrentThread.cpp.o
+base/CException.o: base/CException.cpp.o
 
-.PHONY : base/CCurrentThread.o
+.PHONY : base/CException.o
 
 # target to build an object file
-base/CCurrentThread.cpp.o:
-	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/base/CCurrentThread.cpp.o
-.PHONY : base/CCurrentThread.cpp.o
+base/CException.cpp.o:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/base/CException.cpp.o
+.PHONY : base/CException.cpp.o
 
-base/CCurrentThread.i: base/CCurrentThread.cpp.i
+base/CException.i: base/CException.cpp.i
 
-.PHONY : base/CCurrentThread.i
+.PHONY : base/CException.i
 
 # target to preprocess a source file
-base/CCurrentThread.cpp.i:
-	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/base/CCurrentThread.cpp.i
-.PHONY : base/CCurrentThread.cpp.i
+base/CException.cpp.i:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/base/CException.cpp.i
+.PHONY : base/CException.cpp.i
 
-base/CCurrentThread.s: base/CCurrentThread.cpp.s
+base/CException.s: base/CException.cpp.s
 
-.PHONY : base/CCurrentThread.s
+.PHONY : base/CException.s
 
 # target to generate assembly for a file
-base/CCurrentThread.cpp.s:
-	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/base/CCurrentThread.cpp.s
-.PHONY : base/CCurrentThread.cpp.s
+base/CException.cpp.s:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/base/CException.cpp.s
+.PHONY : base/CException.cpp.s
 
 base/CMutex.o: base/CMutex.cpp.o
 
@@ -258,6 +258,60 @@ base/CThread.cpp.s:
 	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/base/CThread.cpp.s
 .PHONY : base/CThread.cpp.s
 
+base/CThreadData.o: base/CThreadData.cpp.o
+
+.PHONY : base/CThreadData.o
+
+# target to build an object file
+base/CThreadData.cpp.o:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/base/CThreadData.cpp.o
+.PHONY : base/CThreadData.cpp.o
+
+base/CThreadData.i: base/CThreadData.cpp.i
+
+.PHONY : base/CThreadData.i
+
+# target to preprocess a source file
+base/CThreadData.cpp.i:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/base/CThreadData.cpp.i
+.PHONY : base/CThreadData.cpp.i
+
+base/CThreadData.s: base/CThreadData.cpp.s
+
+.PHONY : base/CThreadData.s
+
+# target to generate assembly for a file
+base/CThreadData.cpp.s:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/base/CThreadData.cpp.s
+.PHONY : base/CThreadData.cpp.s
+
+base/CurrentThread.o: base/CurrentThread.cpp.o
+
+.PHONY : base/CurrentThread.o
+
+# target to build an object file
+base/CurrentThread.cpp.o:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/base/CurrentThread.cpp.o
+.PHONY : base/CurrentThread.cpp.o
+
+base/CurrentThread.i: base/CurrentThread.cpp.i
+
+.PHONY : base/CurrentThread.i
+
+# target to preprocess a source file
+base/CurrentThread.cpp.i:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/base/CurrentThread.cpp.i
+.PHONY : base/CurrentThread.cpp.i
+
+base/CurrentThread.s: base/CurrentThread.cpp.s
+
+.PHONY : base/CurrentThread.s
+
+# target to generate assembly for a file
+base/CurrentThread.cpp.s:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/base/CurrentThread.cpp.s
+.PHONY : base/CurrentThread.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -300,15 +354,21 @@ help:
 	@echo "... base/CCountDownLatch.o"
 	@echo "... base/CCountDownLatch.i"
 	@echo "... base/CCountDownLatch.s"
-	@echo "... base/CCurrentThread.o"
-	@echo "... base/CCurrentThread.i"
-	@echo "... base/CCurrentThread.s"
+	@echo "... base/CException.o"
+	@echo "... base/CException.i"
+	@echo "... base/CException.s"
 	@echo "... base/CMutex.o"
 	@echo "... base/CMutex.i"
 	@echo "... base/CMutex.s"
 	@echo "... base/CThread.o"
 	@echo "... base/CThread.i"
 	@echo "... base/CThread.s"
+	@echo "... base/CThreadData.o"
+	@echo "... base/CThreadData.i"
+	@echo "... base/CThreadData.s"
+	@echo "... base/CurrentThread.o"
+	@echo "... base/CurrentThread.i"
+	@echo "... base/CurrentThread.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
