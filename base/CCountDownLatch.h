@@ -14,7 +14,7 @@ namespace neco
 {
     class CCountDownLatch : noncopyable{
     public:
-        explicit CCountDownLatch(int iCount);
+        explicit CCountDownLatch(int nCount);
         void Wait();
         void CountDown();
         int GetCount() const;
@@ -22,7 +22,7 @@ namespace neco
     private:
         mutable CMutexLock m_clsMutex;
         CCondition m_clsCondition GUARDED_BY(m_clsMutex);
-        int m_iCount GUARDED_BY(m_clsMutex);
+        int m_nCount GUARDED_BY(m_clsMutex);
     };
 }
 

@@ -285,6 +285,33 @@ base/CThreadData.cpp.s:
 	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/base/CThreadData.cpp.s
 .PHONY : base/CThreadData.cpp.s
 
+base/CTimestamp.o: base/CTimestamp.cpp.o
+
+.PHONY : base/CTimestamp.o
+
+# target to build an object file
+base/CTimestamp.cpp.o:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/base/CTimestamp.cpp.o
+.PHONY : base/CTimestamp.cpp.o
+
+base/CTimestamp.i: base/CTimestamp.cpp.i
+
+.PHONY : base/CTimestamp.i
+
+# target to preprocess a source file
+base/CTimestamp.cpp.i:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/base/CTimestamp.cpp.i
+.PHONY : base/CTimestamp.cpp.i
+
+base/CTimestamp.s: base/CTimestamp.cpp.s
+
+.PHONY : base/CTimestamp.s
+
+# target to generate assembly for a file
+base/CTimestamp.cpp.s:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/base/CTimestamp.cpp.s
+.PHONY : base/CTimestamp.cpp.s
+
 base/CurrentThread.o: base/CurrentThread.cpp.o
 
 .PHONY : base/CurrentThread.o
@@ -339,6 +366,87 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+net/CChannel.o: net/CChannel.cpp.o
+
+.PHONY : net/CChannel.o
+
+# target to build an object file
+net/CChannel.cpp.o:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CChannel.cpp.o
+.PHONY : net/CChannel.cpp.o
+
+net/CChannel.i: net/CChannel.cpp.i
+
+.PHONY : net/CChannel.i
+
+# target to preprocess a source file
+net/CChannel.cpp.i:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CChannel.cpp.i
+.PHONY : net/CChannel.cpp.i
+
+net/CChannel.s: net/CChannel.cpp.s
+
+.PHONY : net/CChannel.s
+
+# target to generate assembly for a file
+net/CChannel.cpp.s:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CChannel.cpp.s
+.PHONY : net/CChannel.cpp.s
+
+net/CEventLoop.o: net/CEventLoop.cpp.o
+
+.PHONY : net/CEventLoop.o
+
+# target to build an object file
+net/CEventLoop.cpp.o:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CEventLoop.cpp.o
+.PHONY : net/CEventLoop.cpp.o
+
+net/CEventLoop.i: net/CEventLoop.cpp.i
+
+.PHONY : net/CEventLoop.i
+
+# target to preprocess a source file
+net/CEventLoop.cpp.i:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CEventLoop.cpp.i
+.PHONY : net/CEventLoop.cpp.i
+
+net/CEventLoop.s: net/CEventLoop.cpp.s
+
+.PHONY : net/CEventLoop.s
+
+# target to generate assembly for a file
+net/CEventLoop.cpp.s:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CEventLoop.cpp.s
+.PHONY : net/CEventLoop.cpp.s
+
+net/CPoller.o: net/CPoller.cpp.o
+
+.PHONY : net/CPoller.o
+
+# target to build an object file
+net/CPoller.cpp.o:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CPoller.cpp.o
+.PHONY : net/CPoller.cpp.o
+
+net/CPoller.i: net/CPoller.cpp.i
+
+.PHONY : net/CPoller.i
+
+# target to preprocess a source file
+net/CPoller.cpp.i:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CPoller.cpp.i
+.PHONY : net/CPoller.cpp.i
+
+net/CPoller.s: net/CPoller.cpp.s
+
+.PHONY : net/CPoller.s
+
+# target to generate assembly for a file
+net/CPoller.cpp.s:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CPoller.cpp.s
+.PHONY : net/CPoller.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -366,12 +474,24 @@ help:
 	@echo "... base/CThreadData.o"
 	@echo "... base/CThreadData.i"
 	@echo "... base/CThreadData.s"
+	@echo "... base/CTimestamp.o"
+	@echo "... base/CTimestamp.i"
+	@echo "... base/CTimestamp.s"
 	@echo "... base/CurrentThread.o"
 	@echo "... base/CurrentThread.i"
 	@echo "... base/CurrentThread.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... net/CChannel.o"
+	@echo "... net/CChannel.i"
+	@echo "... net/CChannel.s"
+	@echo "... net/CEventLoop.o"
+	@echo "... net/CEventLoop.i"
+	@echo "... net/CEventLoop.s"
+	@echo "... net/CPoller.o"
+	@echo "... net/CPoller.i"
+	@echo "... net/CPoller.s"
 .PHONY : help
 
 

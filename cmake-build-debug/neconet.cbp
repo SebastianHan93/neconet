@@ -123,6 +123,12 @@
 		<Unit filename="/home/hc/CLionProjects/neconet/base/CThreadData.h">
 			<Option target="neconet"/>
 		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/base/CTimestamp.cpp">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/base/CTimestamp.h">
+			<Option target="neconet"/>
+		</Unit>
 		<Unit filename="/home/hc/CLionProjects/neconet/base/CurrentThread.cpp">
 			<Option target="neconet"/>
 		</Unit>
@@ -132,10 +138,31 @@
 		<Unit filename="/home/hc/CLionProjects/neconet/base/Types.h">
 			<Option target="neconet"/>
 		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/base/copyable.h">
+			<Option target="neconet"/>
+		</Unit>
 		<Unit filename="/home/hc/CLionProjects/neconet/base/noncopyable.h">
 			<Option target="neconet"/>
 		</Unit>
 		<Unit filename="/home/hc/CLionProjects/neconet/main.cpp">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/CChannel.cpp">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/CChannel.h">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/CEventLoop.cpp">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/CEventLoop.h">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/CPoller.cpp">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/CPoller.h">
 			<Option target="neconet"/>
 		</Unit>
 		<Unit filename="/home/hc/CLionProjects/neconet/CMakeLists.txt">

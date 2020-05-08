@@ -8,12 +8,12 @@ namespace noncopyable_  // protection from unintended ADL
 {
     class noncopyable
     {
+    public:  // emphasize the following members are private
+        noncopyable( const noncopyable& ) = delete;
+        const noncopyable& operator=( const noncopyable& )= delete;
     protected:
-        noncopyable() {}
-        ~noncopyable() {}
-    private:  // emphasize the following members are private
-        noncopyable( const noncopyable& );
-        const noncopyable& operator=( const noncopyable& );
+        noncopyable() = default;
+        ~noncopyable() = default;
     };
 }
 

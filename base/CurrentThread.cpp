@@ -9,16 +9,18 @@
 
 #include "CCondition.h"
 #include "CurrentThread.h"
+#include "CTimestamp.h"
+#include "CThreadData.h"
 #include <zconf.h>
 
 namespace neco
 {
     namespace CurrentThread
     {
-        extern __thread int t_iCachedTid = 0;
-        extern __thread char t_gcTidString[32];
-        extern __thread int t_iTidStringLength = 6;
-        extern __thread const char * t_pcThreadName = "unknown";
+        __thread int t_nCachedTid = 0;
+        __thread char t_gcTidString[32];
+        __thread int t_nTidStringLength = 6;
+        __thread const char * t_pcThreadName = "unknown";
         static_assert(std::is_same<int, pid_t>::value, "pid_t should be int");
         string StackTrace(bool bDemangle)
         {
@@ -80,7 +82,19 @@ namespace neco
 
         void SleepUsec(int64_t i64Usec)
         {
+            struct timespec ts = {0,0};
+            ts.tv_sec = static_cast<time_t>(i64Usec/CTimestamp::sm_nMicroSecondsPerSecond);
+            ts.tv_nsec = static_cast<long>(i64Usec%CTimestamp::sm_nMicroSecondsPerSecond);
+            ::nanosleep(&ts, NULL);
+        }
 
+        void CacheTid()
+        {
+            if(t_nCachedTid == 0)
+            {
+                t_nCachedTid = detail::GetTid();
+                t_nTidStringLength = snprintf(t_gcTidString,sizeof t_gcTidString,"%5d",t_nCachedTid);
+            }
         }
 
     }

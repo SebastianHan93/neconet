@@ -29,7 +29,7 @@ void neco::CMutexLock::AssertLocked() const ASSERT_CAPABILITY(this)
 void neco::CMutexLock::Lock() ACQUIRE()
 {
     MCHECK(pthread_mutex_lock(&m_Mutex));
-    AssertLocked();
+    AssignHolder();
 }
 
 void neco::CMutexLock::Unlock() RELEASE()

@@ -5,8 +5,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/neconet.dir/base/CMutex.cpp.o"
   "CMakeFiles/neconet.dir/base/CThread.cpp.o"
   "CMakeFiles/neconet.dir/base/CThreadData.cpp.o"
+  "CMakeFiles/neconet.dir/base/CTimestamp.cpp.o"
   "CMakeFiles/neconet.dir/base/CurrentThread.cpp.o"
   "CMakeFiles/neconet.dir/main.cpp.o"
+  "CMakeFiles/neconet.dir/net/CChannel.cpp.o"
+  "CMakeFiles/neconet.dir/net/CEventLoop.cpp.o"
+  "CMakeFiles/neconet.dir/net/CPoller.cpp.o"
   "neconet"
   "neconet.pdb"
 )

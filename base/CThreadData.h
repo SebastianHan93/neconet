@@ -26,6 +26,14 @@ namespace neco
         };
 
         void* StartThread(void* obj);
+        pid_t GetTid();
+        void AfterFork();
+
+        class CThreadNameInitializer
+        {
+        public:
+            CThreadNameInitializer();
+        };
     }
 }
 

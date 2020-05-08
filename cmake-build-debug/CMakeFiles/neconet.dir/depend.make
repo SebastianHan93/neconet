@@ -44,12 +44,55 @@ CMakeFiles/neconet.dir/base/CThreadData.cpp.o: ../base/CurrentThread.h
 CMakeFiles/neconet.dir/base/CThreadData.cpp.o: ../base/Types.h
 CMakeFiles/neconet.dir/base/CThreadData.cpp.o: ../base/noncopyable.h
 
+CMakeFiles/neconet.dir/base/CTimestamp.cpp.o: ../base/CTimestamp.cpp
+CMakeFiles/neconet.dir/base/CTimestamp.cpp.o: ../base/CTimestamp.h
+CMakeFiles/neconet.dir/base/CTimestamp.cpp.o: ../base/Types.h
+CMakeFiles/neconet.dir/base/CTimestamp.cpp.o: ../base/copyable.h
+
+CMakeFiles/neconet.dir/base/CurrentThread.cpp.o: ../base/CAtomic.h
 CMakeFiles/neconet.dir/base/CurrentThread.cpp.o: ../base/CCondition.h
+CMakeFiles/neconet.dir/base/CurrentThread.cpp.o: ../base/CCountDownLatch.h
 CMakeFiles/neconet.dir/base/CurrentThread.cpp.o: ../base/CMutex.h
+CMakeFiles/neconet.dir/base/CurrentThread.cpp.o: ../base/CThread.h
+CMakeFiles/neconet.dir/base/CurrentThread.cpp.o: ../base/CThreadData.h
+CMakeFiles/neconet.dir/base/CurrentThread.cpp.o: ../base/CTimestamp.h
 CMakeFiles/neconet.dir/base/CurrentThread.cpp.o: ../base/CurrentThread.cpp
 CMakeFiles/neconet.dir/base/CurrentThread.cpp.o: ../base/CurrentThread.h
 CMakeFiles/neconet.dir/base/CurrentThread.cpp.o: ../base/Types.h
+CMakeFiles/neconet.dir/base/CurrentThread.cpp.o: ../base/copyable.h
 CMakeFiles/neconet.dir/base/CurrentThread.cpp.o: ../base/noncopyable.h
 
+CMakeFiles/neconet.dir/main.cpp.o: ../base/CAtomic.h
+CMakeFiles/neconet.dir/main.cpp.o: ../base/CCondition.h
+CMakeFiles/neconet.dir/main.cpp.o: ../base/CCountDownLatch.h
+CMakeFiles/neconet.dir/main.cpp.o: ../base/CMutex.h
+CMakeFiles/neconet.dir/main.cpp.o: ../base/CThread.h
+CMakeFiles/neconet.dir/main.cpp.o: ../base/CurrentThread.h
+CMakeFiles/neconet.dir/main.cpp.o: ../base/Types.h
+CMakeFiles/neconet.dir/main.cpp.o: ../base/noncopyable.h
 CMakeFiles/neconet.dir/main.cpp.o: ../main.cpp
+CMakeFiles/neconet.dir/main.cpp.o: ../net/CEventLoop.h
+
+CMakeFiles/neconet.dir/net/CChannel.cpp.o: ../base/CTimestamp.h
+CMakeFiles/neconet.dir/net/CChannel.cpp.o: ../base/Types.h
+CMakeFiles/neconet.dir/net/CChannel.cpp.o: ../base/copyable.h
+CMakeFiles/neconet.dir/net/CChannel.cpp.o: ../base/noncopyable.h
+CMakeFiles/neconet.dir/net/CChannel.cpp.o: ../net/CChannel.cpp
+CMakeFiles/neconet.dir/net/CChannel.cpp.o: ../net/CChannel.h
+
+CMakeFiles/neconet.dir/net/CEventLoop.cpp.o: ../base/CurrentThread.h
+CMakeFiles/neconet.dir/net/CEventLoop.cpp.o: ../base/Types.h
+CMakeFiles/neconet.dir/net/CEventLoop.cpp.o: ../base/noncopyable.h
+CMakeFiles/neconet.dir/net/CEventLoop.cpp.o: ../net/CEventLoop.cpp
+CMakeFiles/neconet.dir/net/CEventLoop.cpp.o: ../net/CEventLoop.h
+CMakeFiles/neconet.dir/net/CEventLoop.cpp.o: ../net/CPoller.h
+
+CMakeFiles/neconet.dir/net/CPoller.cpp.o: ../base/CTimestamp.h
+CMakeFiles/neconet.dir/net/CPoller.cpp.o: ../base/Types.h
+CMakeFiles/neconet.dir/net/CPoller.cpp.o: ../base/copyable.h
+CMakeFiles/neconet.dir/net/CPoller.cpp.o: ../base/noncopyable.h
+CMakeFiles/neconet.dir/net/CPoller.cpp.o: ../net/CChannel.h
+CMakeFiles/neconet.dir/net/CPoller.cpp.o: ../net/CEventLoop.h
+CMakeFiles/neconet.dir/net/CPoller.cpp.o: ../net/CPoller.cpp
+CMakeFiles/neconet.dir/net/CPoller.cpp.o: ../net/CPoller.h
 

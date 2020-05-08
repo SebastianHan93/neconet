@@ -6,6 +6,8 @@
 #include "CThreadData.h"
 #include "CurrentThread.h"
 #include "CException.h"
+#include <sys/syscall.h>
+#include <unistd.h>
 
 namespace neco
 {
@@ -60,6 +62,28 @@ namespace neco
             data->RunInThread();
             delete data;
             return NULL;
+        }
+
+        pid_t GetTid()
+        {
+            return static_cast<pid_t>(::syscall(SYS_gettid));
+        }
+
+        void AfterFork()
+        {
+            neco::CurrentThread::t_nCachedTid = 0;
+            neco::CurrentThread::t_pcThreadName = "main";
+            CurrentThread::Tid();
+            // no need to call pthread_atfork(NULL, NULL, &afterFork);
+        }
+
+        CThreadNameInitializer::CThreadNameInitializer()
+        {
+
+            neco::CurrentThread::t_pcThreadName = "main";
+            CurrentThread::Tid();
+            pthread_atfork(NULL, NULL, &AfterFork);
+
         }
     }
 }

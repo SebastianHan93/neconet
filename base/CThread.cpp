@@ -7,6 +7,7 @@
 
 namespace neco
 {
+    AtomicInt32 CThread::s_aiNumCreated;
     CThread::CThread(THREAD_FUNC pfnFunc, const string& sName)
     :m_bStarted(false),m_bJoined(false),m_pthreadId(0),
     m_tid(0),m_pfnFunc(std::move(pfnFunc)),m_sName(sName),m_clsLatch(1)
