@@ -13,7 +13,7 @@ namespace neco
 {
     namespace net
     {
-        class CEventloop;
+        class CEventLoop;
 
         class CChannel:noncopyable
         {
@@ -21,7 +21,7 @@ namespace neco
             typedef std::function<void()> EVENT_CALLBACK;
             typedef std::function<void(CTimestamp)> READ_EVENT_CALLBACK;
 
-            CChannel(CEventloop* EventLoop,int nFd);
+            CChannel(CEventLoop* EventLoop,int nFd);
             ~CChannel();
 
         public:
@@ -34,10 +34,10 @@ namespace neco
             int GetEvents() const;
             void SetREvents(int nREvent);
             bool IsNoneEvent() const;
-            void EnableReading() const;
+            void SetEnableReading();
             int GetIndex();
             void SetIndex(int nIndex);
-            CEventloop * GetOwnerLoop();
+            CEventLoop * GetOwnerLoop();
 
         private:
             void __UpdateChannel();
@@ -47,7 +47,7 @@ namespace neco
             static const int sm_nReadEvent;
             static const int sm_nWriteEvent;
 
-            CEventloop * m_pEventLoop;
+            CEventLoop * m_pEventLoop;
             const int m_nFd;
             int m_nEvents;
             int m_nREvents;

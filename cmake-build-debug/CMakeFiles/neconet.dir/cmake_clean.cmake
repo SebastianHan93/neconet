@@ -11,6 +11,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/neconet.dir/net/CChannel.cpp.o"
   "CMakeFiles/neconet.dir/net/CEventLoop.cpp.o"
   "CMakeFiles/neconet.dir/net/CPoller.cpp.o"
+  "CMakeFiles/neconet.dir/net/CTimer.cpp.o"
+  "CMakeFiles/neconet.dir/net/CTimerId.cpp.o"
+  "CMakeFiles/neconet.dir/net/CTimerQueue.cpp.o"
   "neconet"
   "neconet.pdb"
 )

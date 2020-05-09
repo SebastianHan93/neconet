@@ -447,6 +447,87 @@ net/CPoller.cpp.s:
 	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CPoller.cpp.s
 .PHONY : net/CPoller.cpp.s
 
+net/CTimer.o: net/CTimer.cpp.o
+
+.PHONY : net/CTimer.o
+
+# target to build an object file
+net/CTimer.cpp.o:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CTimer.cpp.o
+.PHONY : net/CTimer.cpp.o
+
+net/CTimer.i: net/CTimer.cpp.i
+
+.PHONY : net/CTimer.i
+
+# target to preprocess a source file
+net/CTimer.cpp.i:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CTimer.cpp.i
+.PHONY : net/CTimer.cpp.i
+
+net/CTimer.s: net/CTimer.cpp.s
+
+.PHONY : net/CTimer.s
+
+# target to generate assembly for a file
+net/CTimer.cpp.s:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CTimer.cpp.s
+.PHONY : net/CTimer.cpp.s
+
+net/CTimerId.o: net/CTimerId.cpp.o
+
+.PHONY : net/CTimerId.o
+
+# target to build an object file
+net/CTimerId.cpp.o:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CTimerId.cpp.o
+.PHONY : net/CTimerId.cpp.o
+
+net/CTimerId.i: net/CTimerId.cpp.i
+
+.PHONY : net/CTimerId.i
+
+# target to preprocess a source file
+net/CTimerId.cpp.i:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CTimerId.cpp.i
+.PHONY : net/CTimerId.cpp.i
+
+net/CTimerId.s: net/CTimerId.cpp.s
+
+.PHONY : net/CTimerId.s
+
+# target to generate assembly for a file
+net/CTimerId.cpp.s:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CTimerId.cpp.s
+.PHONY : net/CTimerId.cpp.s
+
+net/CTimerQueue.o: net/CTimerQueue.cpp.o
+
+.PHONY : net/CTimerQueue.o
+
+# target to build an object file
+net/CTimerQueue.cpp.o:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CTimerQueue.cpp.o
+.PHONY : net/CTimerQueue.cpp.o
+
+net/CTimerQueue.i: net/CTimerQueue.cpp.i
+
+.PHONY : net/CTimerQueue.i
+
+# target to preprocess a source file
+net/CTimerQueue.cpp.i:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CTimerQueue.cpp.i
+.PHONY : net/CTimerQueue.cpp.i
+
+net/CTimerQueue.s: net/CTimerQueue.cpp.s
+
+.PHONY : net/CTimerQueue.s
+
+# target to generate assembly for a file
+net/CTimerQueue.cpp.s:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CTimerQueue.cpp.s
+.PHONY : net/CTimerQueue.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -492,6 +573,15 @@ help:
 	@echo "... net/CPoller.o"
 	@echo "... net/CPoller.i"
 	@echo "... net/CPoller.s"
+	@echo "... net/CTimer.o"
+	@echo "... net/CTimer.i"
+	@echo "... net/CTimer.s"
+	@echo "... net/CTimerId.o"
+	@echo "... net/CTimerId.i"
+	@echo "... net/CTimerId.s"
+	@echo "... net/CTimerQueue.o"
+	@echo "... net/CTimerQueue.i"
+	@echo "... net/CTimerQueue.s"
 .PHONY : help
 
 

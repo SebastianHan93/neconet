@@ -16,6 +16,9 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/hc/CLionProjects/neconet/net/CChannel.cpp" "/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles/neconet.dir/net/CChannel.cpp.o"
   "/home/hc/CLionProjects/neconet/net/CEventLoop.cpp" "/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles/neconet.dir/net/CEventLoop.cpp.o"
   "/home/hc/CLionProjects/neconet/net/CPoller.cpp" "/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles/neconet.dir/net/CPoller.cpp.o"
+  "/home/hc/CLionProjects/neconet/net/CTimer.cpp" "/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles/neconet.dir/net/CTimer.cpp.o"
+  "/home/hc/CLionProjects/neconet/net/CTimerId.cpp" "/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles/neconet.dir/net/CTimerId.cpp.o"
+  "/home/hc/CLionProjects/neconet/net/CTimerQueue.cpp" "/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles/neconet.dir/net/CTimerQueue.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

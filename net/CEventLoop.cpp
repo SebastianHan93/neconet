@@ -7,6 +7,7 @@
 #include "CEventLoop.h"
 #include "../base/CurrentThread.h"
 #include "CPoller.h"
+#include "CChannel.h"
 
 
 using namespace neco;
@@ -15,6 +16,7 @@ using std::cout;
 using std::endl;
 
 __thread CEventLoop* t_pLoopInThisThread = nullptr;
+const int g_nKPollTimeMs = 1000;
 
 CEventLoop* CEventLoop::GetEventLoopOfCurrentThread()
 {
@@ -52,8 +54,17 @@ void CEventLoop::StartLoop()
     assert(!m_bInLooping);
     AssertInLoopThread();
     m_bInLooping = true;
-    ::poll(nullptr,0,5*1000);
-    m_bInLooping = false;
+    m_bQuit = false;
+    while (!m_bQuit)
+    {
+        m_vActiveChannels.clear();
+        m_unpPoller->Poll(g_nKPollTimeMs,&m_vActiveChannels);
+        for (CHANNEL_LIST::iterator it = m_vActiveChannels.begin();it != m_vActiveChannels.end(); it++)
+        {
+
+            (*it)->HandleEvent(CTimestamp::GetNowTimestamp());
+        }
+    }
 }
 
 void CEventLoop::AssertInLoopThread()
@@ -83,5 +94,7 @@ void CEventLoop::QuitLoop()
 
 void CEventLoop::UpdateChannel(CChannel * iChannel)
 {
-
+    assert(iChannel->GetOwnerLoop() == this);
+    AssertInLoopThread();
+    m_unpPoller->UpdateChannel(iChannel);
 }

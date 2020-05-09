@@ -40,6 +40,7 @@ namespace neco
             bool m_bQuit;
             const pid_t m_pidThreadId;
             std::unique_ptr<CPoller> m_unpPoller;
+            CHANNEL_LIST m_vActiveChannels;
         };
     }
 }

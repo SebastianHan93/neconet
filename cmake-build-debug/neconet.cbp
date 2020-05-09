@@ -165,6 +165,27 @@
 		<Unit filename="/home/hc/CLionProjects/neconet/net/CPoller.h">
 			<Option target="neconet"/>
 		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/CTimer.cpp">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/CTimer.h">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/CTimerId.cpp">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/CTimerId.h">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/CTimerQueue.cpp">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/CTimerQueue.h">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/Callbacks.h">
+			<Option target="neconet"/>
+		</Unit>
 		<Unit filename="/home/hc/CLionProjects/neconet/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
