@@ -28,7 +28,7 @@ namespace neco
             ~CTimerQueue();
 
         public:
-            CTimerId AddTimer(const TIMER_CALL_BACK & cb,CTimestamp iWhen, double dfInterval);
+            CTimerId AddTimer(TIMER_CALL_BACK cb,CTimestamp iWhen, double dfInterval);
 
         private:
             typedef std::pair<CTimestamp,CTimer*> ENTRY;

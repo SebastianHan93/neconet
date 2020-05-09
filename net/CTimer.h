@@ -16,7 +16,7 @@ namespace neco
         class CTimer:noncopyable
         {
         public:
-            CTimer(const TIMER_CALL_BACK &cb,CTimestamp iWhen, double dfInterval);
+            CTimer(TIMER_CALL_BACK cb,CTimestamp iWhen, double dfInterval);
 
         public:
             void Run() const ;

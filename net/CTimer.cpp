@@ -6,8 +6,8 @@
 using namespace neco;
 using namespace neco::net;
 
-CTimer::CTimer(const TIMER_CALL_BACK &cb,CTimestamp iWhen, double dfInterval)
-    :m_ifnCallback(cb),m_iExpiration(iWhen),m_dfInterval(dfInterval),m_bRepeat(dfInterval>0.0)
+CTimer::CTimer(TIMER_CALL_BACK cb,CTimestamp iWhen, double dfInterval)
+    :m_ifnCallback(std::move(cb)),m_iExpiration(iWhen),m_dfInterval(dfInterval),m_bRepeat(dfInterval>0.0)
 {
 
 }

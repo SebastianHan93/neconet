@@ -8,7 +8,7 @@
 #include "../base/CurrentThread.h"
 #include "CPoller.h"
 #include "CChannel.h"
-
+#include "CTimerQueue.h"
 
 using namespace neco;
 using namespace neco::net;
@@ -28,8 +28,8 @@ CEventLoop::CEventLoop()
     :m_bInLooping(false),
     m_pidThreadId(CurrentThread::Tid()),
     m_bQuit(false),
-    m_unpPoller(new CPoller(this))
-
+    m_unpPoller(new CPoller(this)),
+    m_unpTimerQueue(new CTimerQueue(this))
 {
     cout<< "EventLoop created " << this << " in thread " << m_pidThreadId << endl;
     if(t_pLoopInThisThread)
@@ -97,4 +97,27 @@ void CEventLoop::UpdateChannel(CChannel * iChannel)
     assert(iChannel->GetOwnerLoop() == this);
     AssertInLoopThread();
     m_unpPoller->UpdateChannel(iChannel);
+}
+
+CTimestamp CEventLoop::PollReturnTime() const
+{
+    return m_iPollReturnTime;
+}
+
+CTimerId CEventLoop::RunAt(CTimestamp iTime,TIMER_CALL_BACK cb)
+{
+    return m_unpTimerQueue->AddTimer(std::move(cb),iTime,0.0);
+}
+
+CTimerId CEventLoop::RunAfter(double dfDelay,TIMER_CALL_BACK cb)
+{
+    CTimestamp iTime(AddTime(CTimestamp::GetNowTimestamp(),dfDelay));
+    return RunAt(iTime,std::move(cb));
+}
+
+CTimerId CEventLoop::RunEvery(double dfInterval,TIMER_CALL_BACK cb)
+{
+    CTimestamp iTime(AddTime(CTimestamp::GetNowTimestamp(),dfInterval));
+    return m_unpTimerQueue->AddTimer(std::move(cb),iTime,dfInterval);
+
 }

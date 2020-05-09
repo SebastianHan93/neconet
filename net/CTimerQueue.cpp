@@ -90,9 +90,9 @@ CTimerQueue::~CTimerQueue()
     }
 }
 
-CTimerId CTimerQueue::AddTimer(const TIMER_CALL_BACK & cb,CTimestamp iWhen, double dfInterval)
+CTimerId CTimerQueue::AddTimer(TIMER_CALL_BACK cb,CTimestamp iWhen, double dfInterval)
 {
-    CTimer * iTimer = new CTimer(cb,iWhen,dfInterval);
+    CTimer * iTimer = new CTimer(std::move(cb),iWhen,dfInterval);
     m_pEventLoop->AssertInLoopThread();
     bool bEarliestChanged = __InsertTimer(iTimer);
     if(bEarliestChanged)
