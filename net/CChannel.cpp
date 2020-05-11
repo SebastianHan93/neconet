@@ -85,7 +85,7 @@ bool CChannel::IsNoneEvent() const
 void CChannel::SetEnableReading()
 {
     m_nEvents |= sm_nReadEvent;
-
+    __UpdateChannel();
 }
 
 int CChannel::GetIndex()

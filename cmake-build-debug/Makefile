@@ -420,6 +420,60 @@ net/CEventLoop.cpp.s:
 	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CEventLoop.cpp.s
 .PHONY : net/CEventLoop.cpp.s
 
+net/CEventLoopThread.o: net/CEventLoopThread.cpp.o
+
+.PHONY : net/CEventLoopThread.o
+
+# target to build an object file
+net/CEventLoopThread.cpp.o:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CEventLoopThread.cpp.o
+.PHONY : net/CEventLoopThread.cpp.o
+
+net/CEventLoopThread.i: net/CEventLoopThread.cpp.i
+
+.PHONY : net/CEventLoopThread.i
+
+# target to preprocess a source file
+net/CEventLoopThread.cpp.i:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CEventLoopThread.cpp.i
+.PHONY : net/CEventLoopThread.cpp.i
+
+net/CEventLoopThread.s: net/CEventLoopThread.cpp.s
+
+.PHONY : net/CEventLoopThread.s
+
+# target to generate assembly for a file
+net/CEventLoopThread.cpp.s:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CEventLoopThread.cpp.s
+.PHONY : net/CEventLoopThread.cpp.s
+
+net/CInetAddress.o: net/CInetAddress.cpp.o
+
+.PHONY : net/CInetAddress.o
+
+# target to build an object file
+net/CInetAddress.cpp.o:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CInetAddress.cpp.o
+.PHONY : net/CInetAddress.cpp.o
+
+net/CInetAddress.i: net/CInetAddress.cpp.i
+
+.PHONY : net/CInetAddress.i
+
+# target to preprocess a source file
+net/CInetAddress.cpp.i:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CInetAddress.cpp.i
+.PHONY : net/CInetAddress.cpp.i
+
+net/CInetAddress.s: net/CInetAddress.cpp.s
+
+.PHONY : net/CInetAddress.s
+
+# target to generate assembly for a file
+net/CInetAddress.cpp.s:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CInetAddress.cpp.s
+.PHONY : net/CInetAddress.cpp.s
+
 net/CPoller.o: net/CPoller.cpp.o
 
 .PHONY : net/CPoller.o
@@ -446,6 +500,33 @@ net/CPoller.s: net/CPoller.cpp.s
 net/CPoller.cpp.s:
 	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CPoller.cpp.s
 .PHONY : net/CPoller.cpp.s
+
+net/CSocket.o: net/CSocket.cpp.o
+
+.PHONY : net/CSocket.o
+
+# target to build an object file
+net/CSocket.cpp.o:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CSocket.cpp.o
+.PHONY : net/CSocket.cpp.o
+
+net/CSocket.i: net/CSocket.cpp.i
+
+.PHONY : net/CSocket.i
+
+# target to preprocess a source file
+net/CSocket.cpp.i:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CSocket.cpp.i
+.PHONY : net/CSocket.cpp.i
+
+net/CSocket.s: net/CSocket.cpp.s
+
+.PHONY : net/CSocket.s
+
+# target to generate assembly for a file
+net/CSocket.cpp.s:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CSocket.cpp.s
+.PHONY : net/CSocket.cpp.s
 
 net/CTimer.o: net/CTimer.cpp.o
 
@@ -528,6 +609,33 @@ net/CTimerQueue.cpp.s:
 	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CTimerQueue.cpp.s
 .PHONY : net/CTimerQueue.cpp.s
 
+net/SocketsOps.o: net/SocketsOps.cpp.o
+
+.PHONY : net/SocketsOps.o
+
+# target to build an object file
+net/SocketsOps.cpp.o:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/SocketsOps.cpp.o
+.PHONY : net/SocketsOps.cpp.o
+
+net/SocketsOps.i: net/SocketsOps.cpp.i
+
+.PHONY : net/SocketsOps.i
+
+# target to preprocess a source file
+net/SocketsOps.cpp.i:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/SocketsOps.cpp.i
+.PHONY : net/SocketsOps.cpp.i
+
+net/SocketsOps.s: net/SocketsOps.cpp.s
+
+.PHONY : net/SocketsOps.s
+
+# target to generate assembly for a file
+net/SocketsOps.cpp.s:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/SocketsOps.cpp.s
+.PHONY : net/SocketsOps.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -570,9 +678,18 @@ help:
 	@echo "... net/CEventLoop.o"
 	@echo "... net/CEventLoop.i"
 	@echo "... net/CEventLoop.s"
+	@echo "... net/CEventLoopThread.o"
+	@echo "... net/CEventLoopThread.i"
+	@echo "... net/CEventLoopThread.s"
+	@echo "... net/CInetAddress.o"
+	@echo "... net/CInetAddress.i"
+	@echo "... net/CInetAddress.s"
 	@echo "... net/CPoller.o"
 	@echo "... net/CPoller.i"
 	@echo "... net/CPoller.s"
+	@echo "... net/CSocket.o"
+	@echo "... net/CSocket.i"
+	@echo "... net/CSocket.s"
 	@echo "... net/CTimer.o"
 	@echo "... net/CTimer.i"
 	@echo "... net/CTimer.s"
@@ -582,6 +699,9 @@ help:
 	@echo "... net/CTimerQueue.o"
 	@echo "... net/CTimerQueue.i"
 	@echo "... net/CTimerQueue.s"
+	@echo "... net/SocketsOps.o"
+	@echo "... net/SocketsOps.i"
+	@echo "... net/SocketsOps.s"
 .PHONY : help
 
 

@@ -8,34 +8,67 @@
 #include <sys/types.h>
 #include <unistd.h>
 #include <sys/timerfd.h>
-
-
-using namespace neco;
 using namespace neco::net;
+using namespace neco;
+CEventLoop* g_loop;
+int g_flag = 0;
 
-CEventLoop * g_iEventloop;
-void timeout(CTimestamp timestamp)
+void print()
 {
-    printf("Timeout!\n");
-    g_iEventloop->QuitLoop();
+    printf("1111111111111111111");
 }
 
-int main ()
+void threadFunc()
+{
+    g_loop->RunEvery(1.0,print);
+}
+
+int main()
 {
     CEventLoop loop;
-    g_iEventloop = &loop;
-    int timerFd = ::timerfd_create(CLOCK_REALTIME,TFD_NONBLOCK|TFD_CLOEXEC);
-    CChannel  channel(&loop,timerFd);
-    channel.SetReadCallback(timeout);
-    channel.SetEnableReading();
-    struct itimerspec howlang;
-    bzero(&howlang,sizeof(howlang));
-    howlang.it_value.tv_sec = 1;
-    ::timerfd_settime(timerFd,TFD_TIMER_ABSTIME,&howlang, NULL);
-    loop.UpdateChannel(&channel);
+    g_loop = &loop;
+    CThread t(threadFunc);
+    t.Start();
+
     loop.StartLoop();
-    ::close(timerFd);
-
-
-
 }
+//int cnt = 0;
+//CEventLoop* g_loop;
+//
+//void printTid()
+//{
+//    printf("pid = %d, tid = %d\n", getpid(), CurrentThread::Tid());
+//    printf("now %s\n", CTimestamp::GetNowTimestamp().ToString().c_str());
+//}
+//
+//void print(const char* msg)
+//{
+//    printf("msg %s %s\n", CTimestamp::GetNowTimestamp().ToString().c_str(), msg);
+//    if (++cnt == 20)
+//    {
+//        g_loop->QuitLoop();
+//    }
+//}
+//
+//int main()
+//{
+//    printTid();
+//    CEventLoop loop;
+//    g_loop = &loop;
+//
+//    print("main");
+//    loop.RunAfter(1, std::bind(print, "once1"));
+//    loop.RunAfter(1.5, std::bind(print, "once1.5"));
+//    loop.RunAfter(2.5, std::bind(print, "once2.5"));
+//    loop.RunAfter(3.5, std::bind(print, "once3.5"));
+//    loop.RunEvery(2, std::bind(print, "every2"));
+//    loop.RunEvery(3, std::bind(print, "every3"));
+//
+//    loop.StartLoop();
+//    print("main loop exits");
+//    sleep(1);
+//}
+
+
+
+

@@ -4,6 +4,9 @@
 #include <iostream>
 #include <assert.h>
 #include <poll.h>
+#include <unistd.h>
+#include <sys/eventfd.h>
+
 #include "CEventLoop.h"
 #include "../base/CurrentThread.h"
 #include "CPoller.h"
@@ -18,18 +21,30 @@ using std::endl;
 __thread CEventLoop* t_pLoopInThisThread = nullptr;
 const int g_nKPollTimeMs = 1000;
 
+static int CreateEventFd()
+{
+    int nEvtFd = ::eventfd(0,EFD_NONBLOCK | EFD_CLOEXEC);
+    if(nEvtFd < 0)
+    {
+        std::cout << "Failed in eventfd" << std::endl;
+        abort();
+    }
+    return nEvtFd;
+}
+
 CEventLoop* CEventLoop::GetEventLoopOfCurrentThread()
 {
     return t_pLoopInThisThread;
 }
-
 
 CEventLoop::CEventLoop()
     :m_bInLooping(false),
     m_pidThreadId(CurrentThread::Tid()),
     m_bQuit(false),
     m_unpPoller(new CPoller(this)),
-    m_unpTimerQueue(new CTimerQueue(this))
+    m_unpTimerQueue(new CTimerQueue(this)),
+    m_nWakeupFd(CreateEventFd()),
+    m_unpWakeupChannel(new CChannel(this,m_nWakeupFd))
 {
     cout<< "EventLoop created " << this << " in thread " << m_pidThreadId << endl;
     if(t_pLoopInThisThread)
@@ -41,11 +56,14 @@ CEventLoop::CEventLoop()
     {
         t_pLoopInThisThread = this;
     }
+    m_unpWakeupChannel->SetReadCallback(std::bind(&CEventLoop::__HandleRead,this));
+    m_unpWakeupChannel->SetEnableReading();
 }
 
 CEventLoop::~CEventLoop()
 {
     assert(!m_bInLooping);
+    ::close(m_nWakeupFd);
     t_pLoopInThisThread = nullptr;
 }
 
@@ -64,7 +82,10 @@ void CEventLoop::StartLoop()
 
             (*it)->HandleEvent(CTimestamp::GetNowTimestamp());
         }
+        __DoPendingFunctors();
     }
+    std::cout << "CEventLoop " << this << "stop looping" << std::endl;
+    m_bInLooping = false;
 }
 
 void CEventLoop::AssertInLoopThread()
@@ -90,6 +111,10 @@ void CEventLoop::__AbortNotInLoopThread()
 void CEventLoop::QuitLoop()
 {
     m_bQuit = true;
+    if(!IsInLoopThread())
+    {
+        Wakeup();
+    }
 }
 
 void CEventLoop::UpdateChannel(CChannel * iChannel)
@@ -120,4 +145,64 @@ CTimerId CEventLoop::RunEvery(double dfInterval,TIMER_CALL_BACK cb)
     CTimestamp iTime(AddTime(CTimestamp::GetNowTimestamp(),dfInterval));
     return m_unpTimerQueue->AddTimer(std::move(cb),iTime,dfInterval);
 
+}
+
+void CEventLoop::RunInLoop(FUNCTOR cb)
+{
+    if(IsInLoopThread())
+    {
+        cb();
+    }
+    else
+    {
+        QueueInLoop(std::move(cb));
+    }
+}
+
+void CEventLoop::QueueInLoop(FUNCTOR cb)
+{
+    {
+        CMutexLockGuard lock(m_iMutex);
+        m_vPendingFunctors.push_back(std::move(cb));
+    }
+    if(!IsInLoopThread() || m_bCallingPendingFunctors)
+    {
+        Wakeup();
+    }
+}
+
+void CEventLoop::Wakeup()
+{
+    uint64_t nOne = 1;
+    ssize_t n = ::write(m_nWakeupFd,&nOne, sizeof(nOne));
+    if(n!= sizeof(nOne))
+    {
+        std::cout << "CEventLoop::Wakeup() writes " << n << " bytes instead of 8" << std::endl;
+    }
+}
+
+void CEventLoop::__HandleRead()
+{
+    uint64_t nOne = 1;
+    ssize_t n = ::read(m_nWakeupFd,&nOne,sizeof(nOne));
+    if(n!= sizeof(nOne))
+    {
+        std::cout << "CEventLoop::Wakeup() reads " << n << " bytes instead of 8" << std::endl;
+    }
+}
+
+void CEventLoop::__DoPendingFunctors()
+{
+    std::vector<FUNCTOR> vFunctors;
+    m_bCallingPendingFunctors = true;
+    {
+        CMutexLockGuard iLockGuard(m_iMutex);
+        vFunctors.swap(m_vPendingFunctors);
+    }
+
+    for(size_t i = 0;i<vFunctors.size();++i)
+    {
+        vFunctors[i]();
+    }
+    m_bCallingPendingFunctors = false;
 }

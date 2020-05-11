@@ -33,6 +33,7 @@ namespace neco
         private:
             typedef std::pair<CTimestamp,CTimer*> ENTRY;
             typedef std::set<ENTRY> TIMER_LIST;
+            void __AddTimerInLoop(CTimer* iTimer);
             void __HandleRead();
             std::vector<ENTRY> __GetExpired(CTimestamp iNow);
             void __ResetTimers(const std::vector<ENTRY> & vExpired,CTimestamp iNow);

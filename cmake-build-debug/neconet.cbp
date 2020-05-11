@@ -159,10 +159,28 @@
 		<Unit filename="/home/hc/CLionProjects/neconet/net/CEventLoop.h">
 			<Option target="neconet"/>
 		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/CEventLoopThread.cpp">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/CEventLoopThread.h">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/CInetAddress.cpp">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/CInetAddress.h">
+			<Option target="neconet"/>
+		</Unit>
 		<Unit filename="/home/hc/CLionProjects/neconet/net/CPoller.cpp">
 			<Option target="neconet"/>
 		</Unit>
 		<Unit filename="/home/hc/CLionProjects/neconet/net/CPoller.h">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/CSocket.cpp">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/CSocket.h">
 			<Option target="neconet"/>
 		</Unit>
 		<Unit filename="/home/hc/CLionProjects/neconet/net/CTimer.cpp">
@@ -184,6 +202,12 @@
 			<Option target="neconet"/>
 		</Unit>
 		<Unit filename="/home/hc/CLionProjects/neconet/net/Callbacks.h">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/SocketsOps.cpp">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/SocketsOps.h">
 			<Option target="neconet"/>
 		</Unit>
 		<Unit filename="/home/hc/CLionProjects/neconet/CMakeLists.txt">

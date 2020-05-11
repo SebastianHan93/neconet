@@ -93,13 +93,18 @@ CTimerQueue::~CTimerQueue()
 CTimerId CTimerQueue::AddTimer(TIMER_CALL_BACK cb,CTimestamp iWhen, double dfInterval)
 {
     CTimer * iTimer = new CTimer(std::move(cb),iWhen,dfInterval);
+    m_pEventLoop->RunInLoop(std::bind(&CTimerQueue::__AddTimerInLoop,this,iTimer));
+    return CTimerId(iTimer);
+}
+
+void CTimerQueue::__AddTimerInLoop(CTimer* iTimer)
+{
     m_pEventLoop->AssertInLoopThread();
     bool bEarliestChanged = __InsertTimer(iTimer);
     if(bEarliestChanged)
     {
         ResetTimerFd(m_nTimerfd,iTimer->GetExpiration());
     }
-    return CTimerId(iTimer);
 }
 
 void CTimerQueue::__HandleRead()
