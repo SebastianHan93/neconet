@@ -12,43 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f242af7-8ac2-4afc-862b-a55c7ec52c13" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/net/CEventLoopThread.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/net/CEventLoopThread.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/net/CInetAddress.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/net/CInetAddress.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/net/CSocket.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/net/CSocket.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/net/SocketsOps.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/net/SocketsOps.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/net/CChannel.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/net/CChannel.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/net/CEventLoop.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/net/CEventLoop.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/net/CPoller.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/net/CPoller.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/net/CTimer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/net/CTimer.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/net/CTimerId.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/net/CTimerId.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/net/CTimerQueue.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/net/CTimerQueue.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/neconet.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/neconet" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/neconet" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/neconet.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/neconet.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/net/CChannel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/net/CChannel.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/net/CEventLoop.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/net/CEventLoop.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/net/CEventLoop.h" beforeDir="false" afterPath="$PROJECT_DIR$/net/CEventLoop.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/net/CTimerQueue.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/net/CTimerQueue.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/net/CTimerQueue.h" beforeDir="false" afterPath="$PROJECT_DIR$/net/CTimerQueue.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/CSocket.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/net/CSocket.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +65,7 @@
       <workItem from="1588985344704" duration="26382000" />
       <workItem from="1589159615482" duration="14588000" />
       <workItem from="1589179709991" duration="10905000" />
-      <workItem from="1589197327683" duration="6971000" />
+      <workItem from="1589197327683" duration="7382000" />
     </task>
     <servers />
   </component>
