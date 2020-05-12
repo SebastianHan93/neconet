@@ -366,6 +366,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+net/CAcceptor.o: net/CAcceptor.cpp.o
+
+.PHONY : net/CAcceptor.o
+
+# target to build an object file
+net/CAcceptor.cpp.o:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CAcceptor.cpp.o
+.PHONY : net/CAcceptor.cpp.o
+
+net/CAcceptor.i: net/CAcceptor.cpp.i
+
+.PHONY : net/CAcceptor.i
+
+# target to preprocess a source file
+net/CAcceptor.cpp.i:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CAcceptor.cpp.i
+.PHONY : net/CAcceptor.cpp.i
+
+net/CAcceptor.s: net/CAcceptor.cpp.s
+
+.PHONY : net/CAcceptor.s
+
+# target to generate assembly for a file
+net/CAcceptor.cpp.s:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CAcceptor.cpp.s
+.PHONY : net/CAcceptor.cpp.s
+
 net/CChannel.o: net/CChannel.cpp.o
 
 .PHONY : net/CChannel.o
@@ -528,6 +555,60 @@ net/CSocket.cpp.s:
 	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CSocket.cpp.s
 .PHONY : net/CSocket.cpp.s
 
+net/CTcpConnection.o: net/CTcpConnection.cpp.o
+
+.PHONY : net/CTcpConnection.o
+
+# target to build an object file
+net/CTcpConnection.cpp.o:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CTcpConnection.cpp.o
+.PHONY : net/CTcpConnection.cpp.o
+
+net/CTcpConnection.i: net/CTcpConnection.cpp.i
+
+.PHONY : net/CTcpConnection.i
+
+# target to preprocess a source file
+net/CTcpConnection.cpp.i:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CTcpConnection.cpp.i
+.PHONY : net/CTcpConnection.cpp.i
+
+net/CTcpConnection.s: net/CTcpConnection.cpp.s
+
+.PHONY : net/CTcpConnection.s
+
+# target to generate assembly for a file
+net/CTcpConnection.cpp.s:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CTcpConnection.cpp.s
+.PHONY : net/CTcpConnection.cpp.s
+
+net/CTcpServer.o: net/CTcpServer.cpp.o
+
+.PHONY : net/CTcpServer.o
+
+# target to build an object file
+net/CTcpServer.cpp.o:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CTcpServer.cpp.o
+.PHONY : net/CTcpServer.cpp.o
+
+net/CTcpServer.i: net/CTcpServer.cpp.i
+
+.PHONY : net/CTcpServer.i
+
+# target to preprocess a source file
+net/CTcpServer.cpp.i:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CTcpServer.cpp.i
+.PHONY : net/CTcpServer.cpp.i
+
+net/CTcpServer.s: net/CTcpServer.cpp.s
+
+.PHONY : net/CTcpServer.s
+
+# target to generate assembly for a file
+net/CTcpServer.cpp.s:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CTcpServer.cpp.s
+.PHONY : net/CTcpServer.cpp.s
+
 net/CTimer.o: net/CTimer.cpp.o
 
 .PHONY : net/CTimer.o
@@ -672,6 +753,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... net/CAcceptor.o"
+	@echo "... net/CAcceptor.i"
+	@echo "... net/CAcceptor.s"
 	@echo "... net/CChannel.o"
 	@echo "... net/CChannel.i"
 	@echo "... net/CChannel.s"
@@ -690,6 +774,12 @@ help:
 	@echo "... net/CSocket.o"
 	@echo "... net/CSocket.i"
 	@echo "... net/CSocket.s"
+	@echo "... net/CTcpConnection.o"
+	@echo "... net/CTcpConnection.i"
+	@echo "... net/CTcpConnection.s"
+	@echo "... net/CTcpServer.o"
+	@echo "... net/CTcpServer.i"
+	@echo "... net/CTcpServer.s"
 	@echo "... net/CTimer.o"
 	@echo "... net/CTimer.i"
 	@echo "... net/CTimer.s"

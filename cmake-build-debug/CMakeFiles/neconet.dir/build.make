@@ -304,6 +304,45 @@ CMakeFiles/neconet.dir/net/SocketsOps.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neconet.dir/net/SocketsOps.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hc/CLionProjects/neconet/net/SocketsOps.cpp -o CMakeFiles/neconet.dir/net/SocketsOps.cpp.s
 
+CMakeFiles/neconet.dir/net/CAcceptor.cpp.o: CMakeFiles/neconet.dir/flags.make
+CMakeFiles/neconet.dir/net/CAcceptor.cpp.o: ../net/CAcceptor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/neconet.dir/net/CAcceptor.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neconet.dir/net/CAcceptor.cpp.o -c /home/hc/CLionProjects/neconet/net/CAcceptor.cpp
+
+CMakeFiles/neconet.dir/net/CAcceptor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neconet.dir/net/CAcceptor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hc/CLionProjects/neconet/net/CAcceptor.cpp > CMakeFiles/neconet.dir/net/CAcceptor.cpp.i
+
+CMakeFiles/neconet.dir/net/CAcceptor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neconet.dir/net/CAcceptor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hc/CLionProjects/neconet/net/CAcceptor.cpp -o CMakeFiles/neconet.dir/net/CAcceptor.cpp.s
+
+CMakeFiles/neconet.dir/net/CTcpConnection.cpp.o: CMakeFiles/neconet.dir/flags.make
+CMakeFiles/neconet.dir/net/CTcpConnection.cpp.o: ../net/CTcpConnection.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/neconet.dir/net/CTcpConnection.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neconet.dir/net/CTcpConnection.cpp.o -c /home/hc/CLionProjects/neconet/net/CTcpConnection.cpp
+
+CMakeFiles/neconet.dir/net/CTcpConnection.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neconet.dir/net/CTcpConnection.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hc/CLionProjects/neconet/net/CTcpConnection.cpp > CMakeFiles/neconet.dir/net/CTcpConnection.cpp.i
+
+CMakeFiles/neconet.dir/net/CTcpConnection.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neconet.dir/net/CTcpConnection.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hc/CLionProjects/neconet/net/CTcpConnection.cpp -o CMakeFiles/neconet.dir/net/CTcpConnection.cpp.s
+
+CMakeFiles/neconet.dir/net/CTcpServer.cpp.o: CMakeFiles/neconet.dir/flags.make
+CMakeFiles/neconet.dir/net/CTcpServer.cpp.o: ../net/CTcpServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/neconet.dir/net/CTcpServer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neconet.dir/net/CTcpServer.cpp.o -c /home/hc/CLionProjects/neconet/net/CTcpServer.cpp
+
+CMakeFiles/neconet.dir/net/CTcpServer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neconet.dir/net/CTcpServer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hc/CLionProjects/neconet/net/CTcpServer.cpp > CMakeFiles/neconet.dir/net/CTcpServer.cpp.i
+
+CMakeFiles/neconet.dir/net/CTcpServer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neconet.dir/net/CTcpServer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hc/CLionProjects/neconet/net/CTcpServer.cpp -o CMakeFiles/neconet.dir/net/CTcpServer.cpp.s
+
 # Object files for target neconet
 neconet_OBJECTS = \
 "CMakeFiles/neconet.dir/main.cpp.o" \
@@ -324,7 +363,10 @@ neconet_OBJECTS = \
 "CMakeFiles/neconet.dir/net/CEventLoopThread.cpp.o" \
 "CMakeFiles/neconet.dir/net/CSocket.cpp.o" \
 "CMakeFiles/neconet.dir/net/CInetAddress.cpp.o" \
-"CMakeFiles/neconet.dir/net/SocketsOps.cpp.o"
+"CMakeFiles/neconet.dir/net/SocketsOps.cpp.o" \
+"CMakeFiles/neconet.dir/net/CAcceptor.cpp.o" \
+"CMakeFiles/neconet.dir/net/CTcpConnection.cpp.o" \
+"CMakeFiles/neconet.dir/net/CTcpServer.cpp.o"
 
 # External object files for target neconet
 neconet_EXTERNAL_OBJECTS =
@@ -348,9 +390,12 @@ neconet: CMakeFiles/neconet.dir/net/CEventLoopThread.cpp.o
 neconet: CMakeFiles/neconet.dir/net/CSocket.cpp.o
 neconet: CMakeFiles/neconet.dir/net/CInetAddress.cpp.o
 neconet: CMakeFiles/neconet.dir/net/SocketsOps.cpp.o
+neconet: CMakeFiles/neconet.dir/net/CAcceptor.cpp.o
+neconet: CMakeFiles/neconet.dir/net/CTcpConnection.cpp.o
+neconet: CMakeFiles/neconet.dir/net/CTcpServer.cpp.o
 neconet: CMakeFiles/neconet.dir/build.make
 neconet: CMakeFiles/neconet.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable neconet"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX executable neconet"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/neconet.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -19,7 +19,7 @@ using std::cout;
 using std::endl;
 
 __thread CEventLoop* t_pLoopInThisThread = nullptr;
-const int g_nKPollTimeMs = 1000;
+const int g_nKPollTimeMs = 10000;
 
 static int CreateEventFd()
 {

@@ -147,6 +147,12 @@
 		<Unit filename="/home/hc/CLionProjects/neconet/main.cpp">
 			<Option target="neconet"/>
 		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/CAcceptor.cpp">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/CAcceptor.h">
+			<Option target="neconet"/>
+		</Unit>
 		<Unit filename="/home/hc/CLionProjects/neconet/net/CChannel.cpp">
 			<Option target="neconet"/>
 		</Unit>
@@ -181,6 +187,18 @@
 			<Option target="neconet"/>
 		</Unit>
 		<Unit filename="/home/hc/CLionProjects/neconet/net/CSocket.h">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/CTcpConnection.cpp">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/CTcpConnection.h">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/CTcpServer.cpp">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/CTcpServer.h">
 			<Option target="neconet"/>
 		</Unit>
 		<Unit filename="/home/hc/CLionProjects/neconet/net/CTimer.cpp">

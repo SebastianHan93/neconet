@@ -5,33 +5,58 @@
 #include "base/CThread.h"
 #include "base/CurrentThread.h"
 #include "net/CChannel.h"
+#include "net/CInetAddress.h"
+#include "net/CAcceptor.h"
 #include <sys/types.h>
 #include <unistd.h>
 #include <sys/timerfd.h>
+#include "net/SocketsOps.h"
 using namespace neco::net;
 using namespace neco;
-CEventLoop* g_loop;
-int g_flag = 0;
 
-void print()
+void newConnection(int sockfd, const CInetAddress& peerAddr)
 {
-    printf("1111111111111111111");
-}
-
-void threadFunc()
-{
-    g_loop->RunEvery(1.0,print);
+    printf("newConnection(): accepted a new connection from %s\n",
+           peerAddr.ToHostPort().c_str());
+    ::write(sockfd, "How are you?\n", 13);
+    sockets::Close(sockfd);
 }
 
 int main()
 {
-    CEventLoop loop;
-    g_loop = &loop;
-    CThread t(threadFunc);
-    t.Start();
+    printf("main(): pid = %d\n", getpid());
+
+    neco::net::CInetAddress listenAddr(10000);
+    neco::net::CEventLoop loop;
+
+    neco::net::CAcceptor acceptor(&loop, listenAddr);
+    acceptor.SetNewConnectionCallback(newConnection);
+    acceptor.StartListen();
 
     loop.StartLoop();
 }
+//CEventLoop* g_loop;
+//int g_flag = 0;
+//
+//void print()
+//{
+//    printf("1111111111111111111");
+//}
+//
+//void threadFunc()
+//{
+//    g_loop->RunEvery(1.0,print);
+//}
+//
+//int main()
+//{
+//    CEventLoop loop;
+//    g_loop = &loop;
+//    CThread t(threadFunc);
+//    t.Start();
+//
+//    loop.StartLoop();
+//}
 //int cnt = 0;
 //CEventLoop* g_loop;
 //

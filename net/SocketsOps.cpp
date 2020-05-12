@@ -150,3 +150,16 @@ void sockets::FromHostPort(const char * pIP,uint16_t nPort, struct sockaddr_in *
         std::cout << "sockets::fromHostPort" <<std::endl;
     }
 }
+
+struct sockaddr_in sockets::GetLocalAddr(int nSockfd)
+{
+    struct sockaddr_in iLocalAddr;
+    bzero(&iLocalAddr, sizeof(iLocalAddr));
+    socklen_t nAddrLen = sizeof(iLocalAddr);
+    if(::getsockname(nSockfd,sockaddr_cast(&iLocalAddr),&nAddrLen)<0)
+    {
+        std::cout << "sockets::GetLocalAddr";
+    }
+
+    return iLocalAddr;
+}

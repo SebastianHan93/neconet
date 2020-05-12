@@ -44,7 +44,7 @@ CTimestamp CPoller::Poll(int nTimeoutMs,CHANNEL_LIST * vActiveChannels)
 void CPoller::UpdateChannel(CChannel* channel)
 {
     AssertInLoopThread();
-    printf("fd=%d events=%d",channel->GetFd(),channel->GetEvents());
+    printf("fd=%d events=%d\n",channel->GetFd(),channel->GetEvents());
     if(channel->GetIndex()<0)
     {
         assert(m_mChannelsMap.find(channel->GetFd())==m_mChannelsMap.end());

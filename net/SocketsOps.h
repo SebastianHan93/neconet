@@ -51,7 +51,7 @@ namespace neco
             void Close(int nSockFd);
             void ToHostPort(char * cBuf,size_t nSize,const struct sockaddr_in& iAddr);
             void FromHostPort(const char * pIP,uint16_t nPort, struct sockaddr_in * iAddr);
-
+            struct sockaddr_in GetLocalAddr(int nSockfd);
         }
     }
 }

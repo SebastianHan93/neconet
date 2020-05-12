@@ -73,10 +73,29 @@ CMakeFiles/neconet.dir/main.cpp.o: ../base/Types.h
 CMakeFiles/neconet.dir/main.cpp.o: ../base/copyable.h
 CMakeFiles/neconet.dir/main.cpp.o: ../base/noncopyable.h
 CMakeFiles/neconet.dir/main.cpp.o: ../main.cpp
+CMakeFiles/neconet.dir/main.cpp.o: ../net/CAcceptor.h
 CMakeFiles/neconet.dir/main.cpp.o: ../net/CChannel.h
 CMakeFiles/neconet.dir/main.cpp.o: ../net/CEventLoop.h
+CMakeFiles/neconet.dir/main.cpp.o: ../net/CInetAddress.h
+CMakeFiles/neconet.dir/main.cpp.o: ../net/CSocket.h
 CMakeFiles/neconet.dir/main.cpp.o: ../net/CTimerId.h
 CMakeFiles/neconet.dir/main.cpp.o: ../net/Callbacks.h
+CMakeFiles/neconet.dir/main.cpp.o: ../net/SocketsOps.h
+
+CMakeFiles/neconet.dir/net/CAcceptor.cpp.o: ../base/CMutex.h
+CMakeFiles/neconet.dir/net/CAcceptor.cpp.o: ../base/CTimestamp.h
+CMakeFiles/neconet.dir/net/CAcceptor.cpp.o: ../base/Types.h
+CMakeFiles/neconet.dir/net/CAcceptor.cpp.o: ../base/copyable.h
+CMakeFiles/neconet.dir/net/CAcceptor.cpp.o: ../base/noncopyable.h
+CMakeFiles/neconet.dir/net/CAcceptor.cpp.o: ../net/CAcceptor.cpp
+CMakeFiles/neconet.dir/net/CAcceptor.cpp.o: ../net/CAcceptor.h
+CMakeFiles/neconet.dir/net/CAcceptor.cpp.o: ../net/CChannel.h
+CMakeFiles/neconet.dir/net/CAcceptor.cpp.o: ../net/CEventLoop.h
+CMakeFiles/neconet.dir/net/CAcceptor.cpp.o: ../net/CInetAddress.h
+CMakeFiles/neconet.dir/net/CAcceptor.cpp.o: ../net/CSocket.h
+CMakeFiles/neconet.dir/net/CAcceptor.cpp.o: ../net/CTimerId.h
+CMakeFiles/neconet.dir/net/CAcceptor.cpp.o: ../net/Callbacks.h
+CMakeFiles/neconet.dir/net/CAcceptor.cpp.o: ../net/SocketsOps.h
 
 CMakeFiles/neconet.dir/net/CChannel.cpp.o: ../base/CMutex.h
 CMakeFiles/neconet.dir/net/CChannel.cpp.o: ../base/CTimestamp.h
@@ -121,6 +140,7 @@ CMakeFiles/neconet.dir/net/CEventLoopThread.cpp.o: ../net/Callbacks.h
 CMakeFiles/neconet.dir/net/CInetAddress.cpp.o: ../base/copyable.h
 CMakeFiles/neconet.dir/net/CInetAddress.cpp.o: ../net/CInetAddress.cpp
 CMakeFiles/neconet.dir/net/CInetAddress.cpp.o: ../net/CInetAddress.h
+CMakeFiles/neconet.dir/net/CInetAddress.cpp.o: ../net/SocketsOps.h
 
 CMakeFiles/neconet.dir/net/CPoller.cpp.o: ../base/CMutex.h
 CMakeFiles/neconet.dir/net/CPoller.cpp.o: ../base/CTimestamp.h
@@ -134,9 +154,12 @@ CMakeFiles/neconet.dir/net/CPoller.cpp.o: ../net/CPoller.h
 CMakeFiles/neconet.dir/net/CPoller.cpp.o: ../net/CTimerId.h
 CMakeFiles/neconet.dir/net/CPoller.cpp.o: ../net/Callbacks.h
 
+CMakeFiles/neconet.dir/net/CSocket.cpp.o: ../base/copyable.h
 CMakeFiles/neconet.dir/net/CSocket.cpp.o: ../base/noncopyable.h
+CMakeFiles/neconet.dir/net/CSocket.cpp.o: ../net/CInetAddress.h
 CMakeFiles/neconet.dir/net/CSocket.cpp.o: ../net/CSocket.cpp
 CMakeFiles/neconet.dir/net/CSocket.cpp.o: ../net/CSocket.h
+CMakeFiles/neconet.dir/net/CSocket.cpp.o: ../net/SocketsOps.h
 
 CMakeFiles/neconet.dir/net/CTimer.cpp.o: ../base/CTimestamp.h
 CMakeFiles/neconet.dir/net/CTimer.cpp.o: ../base/Types.h
