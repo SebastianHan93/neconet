@@ -29,15 +29,23 @@ namespace neco
             void SetReadCallback(READ_EVENT_CALLBACK Callback);
             void SetWriteCallback(EVENT_CALLBACK Callback);
             void SetErrorCallback(EVENT_CALLBACK Callback);
+            void SetCloseCallback(EVENT_CALLBACK Callback);
 
             int GetFd() const;
             int GetEvents() const;
             void SetREvents(int nREvent);
             bool IsNoneEvent() const;
+
             void SetEnableReading();
+            void SetEnableWriting();
+            void DisableWriting();
+            void DisableAll();
+            bool IsWriting();
+
             int GetIndex();
             void SetIndex(int nIndex);
             CEventLoop * GetOwnerLoop();
+
 
         private:
             void __UpdateChannel();
@@ -52,10 +60,13 @@ namespace neco
             int m_nEvents;
             int m_nREvents;
             int m_nIndex;
+
+            bool m_bEventHandling;
+
             READ_EVENT_CALLBACK m_ifnReadCallbackFunc;
             EVENT_CALLBACK m_ifnWriteCallbackFunc;
             EVENT_CALLBACK m_ifnErrorCallbackFunc;
-
+            EVENT_CALLBACK m_ifnCloseCallbackFunc;
         };
     }
 }

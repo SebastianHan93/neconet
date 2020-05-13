@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/hc/CLionProjects/neconet/base/CurrentThread.cpp" "/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles/neconet.dir/base/CurrentThread.cpp.o"
   "/home/hc/CLionProjects/neconet/main.cpp" "/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles/neconet.dir/main.cpp.o"
   "/home/hc/CLionProjects/neconet/net/CAcceptor.cpp" "/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles/neconet.dir/net/CAcceptor.cpp.o"
+  "/home/hc/CLionProjects/neconet/net/CBuffer.cpp" "/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles/neconet.dir/net/CBuffer.cpp.o"
   "/home/hc/CLionProjects/neconet/net/CChannel.cpp" "/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles/neconet.dir/net/CChannel.cpp.o"
   "/home/hc/CLionProjects/neconet/net/CEventLoop.cpp" "/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles/neconet.dir/net/CEventLoop.cpp.o"
   "/home/hc/CLionProjects/neconet/net/CEventLoopThread.cpp" "/home/hc/CLionProjects/neconet/cmake-build-debug/CMakeFiles/neconet.dir/net/CEventLoopThread.cpp.o"

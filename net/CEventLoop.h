@@ -36,6 +36,7 @@ namespace neco
             bool IsInLoopThread() const ;
             static CEventLoop* GetEventLoopOfCurrentThread();
             void UpdateChannel(CChannel * iChannel);
+            void RemoveChannel(CChannel * iChannel);
             CTimestamp PollReturnTime() const;
             CTimerId RunAt(CTimestamp iTime,TIMER_CALL_BACK cb);
             CTimerId RunAfter(double dfDelay,TIMER_CALL_BACK cb);

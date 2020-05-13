@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/neconet.dir/base/CurrentThread.cpp.o"
   "CMakeFiles/neconet.dir/main.cpp.o"
   "CMakeFiles/neconet.dir/net/CAcceptor.cpp.o"
+  "CMakeFiles/neconet.dir/net/CBuffer.cpp.o"
   "CMakeFiles/neconet.dir/net/CChannel.cpp.o"
   "CMakeFiles/neconet.dir/net/CEventLoop.cpp.o"
   "CMakeFiles/neconet.dir/net/CEventLoopThread.cpp.o"

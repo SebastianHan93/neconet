@@ -153,6 +153,12 @@
 		<Unit filename="/home/hc/CLionProjects/neconet/net/CAcceptor.h">
 			<Option target="neconet"/>
 		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/CBuffer.cpp">
+			<Option target="neconet"/>
+		</Unit>
+		<Unit filename="/home/hc/CLionProjects/neconet/net/CBuffer.h">
+			<Option target="neconet"/>
+		</Unit>
 		<Unit filename="/home/hc/CLionProjects/neconet/net/CChannel.cpp">
 			<Option target="neconet"/>
 		</Unit>

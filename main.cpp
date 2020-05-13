@@ -11,89 +11,50 @@
 #include <unistd.h>
 #include <sys/timerfd.h>
 #include "net/SocketsOps.h"
+#include "net/CTcpConnection.h"
+#include "net/CTcpServer.h"
 using namespace neco::net;
 using namespace neco;
 
-void newConnection(int sockfd, const CInetAddress& peerAddr)
+
+void onConnection(const C_TCP_CONNECTION_PTR & conn)
 {
-    printf("newConnection(): accepted a new connection from %s\n",
-           peerAddr.ToHostPort().c_str());
-    ::write(sockfd, "How are you?\n", 13);
-    sockets::Close(sockfd);
+    if (conn->IsConnected())
+    {
+        printf("onConnection(): new connection [%s] from %s\n",
+               conn->GetName().c_str(),
+               conn->GetPeerAddress().ToHostPort().c_str());
+    }
+    else
+    {
+        printf("onConnection(): connection [%s] is down\n",
+               conn->GetName().c_str());
+    }
+}
+
+void onMessage(const C_TCP_CONNECTION_PTR& conn,
+               CBuffer *buf,
+               CTimestamp timestamp)
+{
+    printf("onMessage(): received %zd bytes from connection [%s] at %s\n",
+           buf->GetReadableBytes(),
+           conn->GetName().c_str(),
+           timestamp.ToFormattedString().c_str());
+    printf("onMessage(): [%s]\n", buf->RetrieveAsString().c_str());
+
 }
 
 int main()
 {
     printf("main(): pid = %d\n", getpid());
 
-    neco::net::CInetAddress listenAddr(10000);
-    neco::net::CEventLoop loop;
+    CInetAddress listenAddr(9981);
+    CEventLoop loop;
 
-    neco::net::CAcceptor acceptor(&loop, listenAddr);
-    acceptor.SetNewConnectionCallback(newConnection);
-    acceptor.StartListen();
+    CTcpServer server(&loop, listenAddr);
+    server.SetConnectionCallback(onConnection);
+    server.SetMessageCallback(onMessage);
+    server.Start();
 
     loop.StartLoop();
 }
-//CEventLoop* g_loop;
-//int g_flag = 0;
-//
-//void print()
-//{
-//    printf("1111111111111111111");
-//}
-//
-//void threadFunc()
-//{
-//    g_loop->RunEvery(1.0,print);
-//}
-//
-//int main()
-//{
-//    CEventLoop loop;
-//    g_loop = &loop;
-//    CThread t(threadFunc);
-//    t.Start();
-//
-//    loop.StartLoop();
-//}
-//int cnt = 0;
-//CEventLoop* g_loop;
-//
-//void printTid()
-//{
-//    printf("pid = %d, tid = %d\n", getpid(), CurrentThread::Tid());
-//    printf("now %s\n", CTimestamp::GetNowTimestamp().ToString().c_str());
-//}
-//
-//void print(const char* msg)
-//{
-//    printf("msg %s %s\n", CTimestamp::GetNowTimestamp().ToString().c_str(), msg);
-//    if (++cnt == 20)
-//    {
-//        g_loop->QuitLoop();
-//    }
-//}
-//
-//int main()
-//{
-//    printTid();
-//    CEventLoop loop;
-//    g_loop = &loop;
-//
-//    print("main");
-//    loop.RunAfter(1, std::bind(print, "once1"));
-//    loop.RunAfter(1.5, std::bind(print, "once1.5"));
-//    loop.RunAfter(2.5, std::bind(print, "once2.5"));
-//    loop.RunAfter(3.5, std::bind(print, "once3.5"));
-//    loop.RunEvery(2, std::bind(print, "every2"));
-//    loop.RunEvery(3, std::bind(print, "every3"));
-//
-//    loop.StartLoop();
-//    print("main loop exits");
-//    sleep(1);
-//}
-
-
-
-

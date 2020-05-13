@@ -14,21 +14,33 @@ const int CChannel::sm_nReadEvent = POLLIN | POLLPRI;
 const int CChannel::sm_nWriteEvent = POLLOUT;
 
 CChannel::CChannel(CEventLoop* EventLoop,int nFd)
-:m_pEventLoop(EventLoop),m_nFd(nFd),m_nEvents(0),m_nREvents(0),m_nIndex(-1)
+    :m_pEventLoop(EventLoop),
+     m_nFd(nFd),
+     m_nEvents(0),
+     m_nREvents(0),
+     m_nIndex(-1),
+     m_bEventHandling(false)
 {
 
 }
 
 CChannel::~CChannel()
 {
-
+    assert(!m_bEventHandling);
 }
 
 void CChannel::HandleEvent(CTimestamp ReceiveTime)
 {
+    m_bEventHandling = true;
     if(m_nREvents & POLLNVAL)
     {
         printf("Channel::handle_event() POLLNVAL\n");
+    }
+    if((m_nREvents & POLLHUP) && !(m_nREvents & POLLIN))
+    {
+        printf("Channel::handle_event() POLLHUP\n");
+        if(m_ifnCloseCallbackFunc)
+            m_ifnCloseCallbackFunc();
     }
     if(m_nREvents & (POLLERR|POLLNVAL))
     {
@@ -45,6 +57,7 @@ void CChannel::HandleEvent(CTimestamp ReceiveTime)
         if(m_ifnWriteCallbackFunc)
             m_ifnWriteCallbackFunc();
     }
+    m_bEventHandling = false;
 }
 
 void CChannel::SetReadCallback(READ_EVENT_CALLBACK Callback)
@@ -60,6 +73,17 @@ void CChannel::SetWriteCallback(EVENT_CALLBACK Callback)
 void CChannel::SetErrorCallback(EVENT_CALLBACK Callback)
 {
     m_ifnErrorCallbackFunc = std::move(Callback);
+}
+
+void CChannel::SetCloseCallback(EVENT_CALLBACK Callback)
+{
+    m_ifnCloseCallbackFunc = std::move(Callback);
+}
+
+void CChannel::DisableAll()
+{
+    m_nEvents = sm_nNoneEvent;
+    __UpdateChannel();
 }
 
 int CChannel::GetFd() const
@@ -86,6 +110,23 @@ void CChannel::SetEnableReading()
 {
     m_nEvents |= sm_nReadEvent;
     __UpdateChannel();
+}
+
+void CChannel::SetEnableWriting()
+{
+    m_nEvents |=sm_nWriteEvent;
+    __UpdateChannel();
+}
+
+void CChannel::DisableWriting()
+{
+    m_nEvents &= ~sm_nWriteEvent;
+    __UpdateChannel();
+}
+
+bool CChannel::IsWriting()
+{
+    return m_nEvents & sm_nWriteEvent;
 }
 
 int CChannel::GetIndex()

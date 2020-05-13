@@ -62,7 +62,18 @@ void CTcpServer::__NewConnection(int nSockFd,const CInetAddress &iPeerAddr)
     printf("TcpServer::newConnection [%s] - new connection [%s] from  %s\n",m_sName.c_str(),sConnName.c_str(),iPeerAddr.ToHostPort().c_str());
     CInetAddress iLocalAddr(sockets::GetLocalAddr(nSockFd));
     C_TCP_CONNECTION_PTR sspConn(new CTcpConnection(m_pEventLoop,sConnName,nSockFd,iLocalAddr,iPeerAddr));
+    m_mConnectionMap[sConnName] = sspConn;
     sspConn->SetConnectionCallback(m_ifnConnectionCallback);
     sspConn->SetMessageCallback(m_ifnMessageCallback);
+    sspConn->SetCloseCallback(std::bind(&CTcpServer::__RemoveConnection,this,_1));
     sspConn->ConnectEstablished();
+}
+
+void CTcpServer::__RemoveConnection(const C_TCP_CONNECTION_PTR & iConn)
+{
+    m_pEventLoop->AssertInLoopThread();
+    printf("TcpServer::removeConnection [%s] - connection [%s]",m_sName.c_str(),iConn->GetName().c_str());
+    size_t n = m_mConnectionMap.erase(iConn->GetName());
+    assert(n==1);(void)n;
+    m_pEventLoop->QueueInLoop(std::bind(&CTcpConnection::ConnectDestroyed,iConn));
 }

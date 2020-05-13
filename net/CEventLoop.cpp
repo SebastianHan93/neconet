@@ -41,6 +41,7 @@ CEventLoop::CEventLoop()
     :m_bInLooping(false),
     m_pidThreadId(CurrentThread::Tid()),
     m_bQuit(false),
+    m_bCallingPendingFunctors(false),
     m_unpPoller(new CPoller(this)),
     m_unpTimerQueue(new CTimerQueue(this)),
     m_nWakeupFd(CreateEventFd()),
@@ -115,6 +116,13 @@ void CEventLoop::QuitLoop()
     {
         Wakeup();
     }
+}
+
+void CEventLoop::RemoveChannel(CChannel * iChannel)
+{
+    assert(iChannel->GetOwnerLoop() == this);
+    AssertInLoopThread();
+    m_unpPoller->RemoveChannel(iChannel);
 }
 
 void CEventLoop::UpdateChannel(CChannel * iChannel)

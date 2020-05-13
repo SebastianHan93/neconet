@@ -27,7 +27,8 @@ namespace neco
         public:
             typedef std::vector<CChannel *>CHANNEL_LIST;
             CTimestamp Poll(int nTimeoutMs,CHANNEL_LIST * ActiveChannels);
-            void UpdateChannel(CChannel* channel);
+            void UpdateChannel(CChannel* iChannel);
+            void RemoveChannel(CChannel * iChannel);
             void AssertInLoopThread();
 
         private:

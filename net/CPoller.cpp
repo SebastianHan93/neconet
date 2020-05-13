@@ -7,6 +7,7 @@
 #include "CEventLoop.h"
 #include <poll.h>
 #include <assert.h>
+#include <algorithm>
 
 using namespace neco;
 using namespace neco::net;
@@ -41,34 +42,34 @@ CTimestamp CPoller::Poll(int nTimeoutMs,CHANNEL_LIST * vActiveChannels)
     return iTimeNow;
 }
 
-void CPoller::UpdateChannel(CChannel* channel)
+void CPoller::UpdateChannel(CChannel* iChannel)
 {
     AssertInLoopThread();
-    printf("fd=%d events=%d\n",channel->GetFd(),channel->GetEvents());
-    if(channel->GetIndex()<0)
+    printf("fd=%d events=%d\n",iChannel->GetFd(),iChannel->GetEvents());
+    if(iChannel->GetIndex()<0)
     {
-        assert(m_mChannelsMap.find(channel->GetFd())==m_mChannelsMap.end());
+        assert(m_mChannelsMap.find(iChannel->GetFd())==m_mChannelsMap.end());
         struct pollfd pFd;
-        pFd.fd = channel->GetFd();
-        pFd.events = static_cast<short>(channel->GetEvents());
+        pFd.fd = iChannel->GetFd();
+        pFd.events = static_cast<short>(iChannel->GetEvents());
         pFd.revents = 0;
         m_vPollFds.push_back(pFd);
         int nIdx = static_cast<int>(m_vPollFds.size())-1;
-        channel->SetIndex(nIdx);
-        m_mChannelsMap[pFd.fd] = channel;
+        iChannel->SetIndex(nIdx);
+        m_mChannelsMap[pFd.fd] = iChannel;
     }
     else
     {
-        assert(m_mChannelsMap.find(channel->GetFd())!=m_mChannelsMap.end());
-        assert(m_mChannelsMap[channel->GetFd()] == channel);
-        int nIdx = channel->GetIndex();
+        assert(m_mChannelsMap.find(iChannel->GetFd())!=m_mChannelsMap.end());
+        assert(m_mChannelsMap[iChannel->GetFd()] == iChannel);
+        int nIdx = iChannel->GetIndex();
         assert(0<=nIdx && nIdx<static_cast<int>(m_vPollFds.size()));
         struct pollfd & pFd = m_vPollFds[nIdx];
-        assert(pFd.fd==channel->GetFd() || pFd.fd==-1);
-        pFd.events = static_cast<short >(channel->GetEvents());
+        assert(pFd.fd==iChannel->GetFd() || pFd.fd==-iChannel->GetFd()-1);
+        pFd.events = static_cast<short >(iChannel->GetEvents());
         pFd.revents = 0;
-        if(channel->IsNoneEvent())
-            pFd.fd = -1;
+        if(iChannel->IsNoneEvent())
+            pFd.fd = -iChannel->GetFd()-1;
 
     }
 }
@@ -95,4 +96,35 @@ void CPoller::__FillActiveChannels(int nNumEvents,CHANNEL_LIST * vActiveChannels
         }
     }
 }
+
+void CPoller::RemoveChannel(CChannel * iChannel)
+{
+    AssertInLoopThread();
+    printf("fd=%d\n",iChannel->GetFd());
+    assert(m_mChannelsMap.find(iChannel->GetFd())!=m_mChannelsMap.end());
+    assert(m_mChannelsMap[iChannel->GetFd()] == iChannel);
+    assert(iChannel->IsNoneEvent());
+    int nIdx = iChannel->GetIndex();
+    assert(0<=nIdx && nIdx<static_cast<int>(m_vPollFds.size()));
+    const struct pollfd & pFd = m_vPollFds[nIdx];
+    assert(pFd.fd == -iChannel->GetFd() -1 && pFd.events == iChannel->GetEvents());
+    size_t n = m_mChannelsMap.erase(iChannel->GetFd());
+    assert(n==1);(void)n;
+    if(implicit_cast<size_t >(nIdx) == m_vPollFds.size()-1)
+    {
+        m_vPollFds.pop_back();
+    }
+    else
+    {
+        int nChannelAtEnd = m_vPollFds.back().fd;
+        std::iter_swap(m_vPollFds.begin()+nIdx,m_vPollFds.end()-1);
+        if(nChannelAtEnd < 0)
+        {
+            nChannelAtEnd = -nChannelAtEnd-1;
+        }
+        m_mChannelsMap[nChannelAtEnd]->SetIndex(nIdx);
+        m_vPollFds.pop_back();
+    }
+}
+
 

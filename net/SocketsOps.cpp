@@ -163,3 +163,25 @@ struct sockaddr_in sockets::GetLocalAddr(int nSockfd)
 
     return iLocalAddr;
 }
+
+int sockets::GetSocketError(int nSockfd)
+{
+    int nOptval;
+    socklen_t nOptLen = sizeof(nOptLen);
+    if(::getsockopt(nSockfd,SOL_SOCKET,SO_ERROR,&nOptval,&nOptLen)<0)
+    {
+        return errno;
+    }
+    else
+    {
+        return nOptval;
+    }
+}
+
+void sockets::ShutdownWrite(int nSockfd)
+{
+    if(::shutdown(nSockfd,SHUT_WR)<0)
+    {
+        printf("sockets::shutdownWrite\n");
+    }
+}

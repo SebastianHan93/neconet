@@ -24,7 +24,7 @@ namespace neco
             void Listen();
             int Accept(CInetAddress * iPeerAddr);
             void SetReuseAddr(bool bOn);
-
+            void ShutdownWrite();
         private:
             const int m_nSockFd;
         };

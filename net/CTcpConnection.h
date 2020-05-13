@@ -9,6 +9,7 @@
 #include "../base/noncopyable.h"
 #include "Callbacks.h"
 #include "CInetAddress.h"
+#include "CBuffer.h"
 
 // struct tcp_info is in <netinet/tcp.h>
 struct tcp_info;
@@ -31,14 +32,25 @@ namespace neco
             const CInetAddress & GetLocalAddress();
             const CInetAddress & GetPeerAddress();
             bool IsConnected() const;
-            void SetConnectionCallback(const CONNECTION_CALLBACK cb);
-            void SetMessageCallback(const MESSAGE_CALLBACK cb);
+
+            void Send(const std::string& rMessage);
+            void ShutDown();
+            void SetConnectionCallback(const CONNECTION_CALLBACK &cb);
+            void SetMessageCallback(const MESSAGE_CALLBACK &cb);
+            void SetCloseCallback(const CLOSE_CALLBACK &cb);
             void ConnectEstablished();
+            void ConnectDestroyed();
 
         private:
-            enum ESTATE{eConnecting,eConnected};
-            void __HandleRead();
+            enum ESTATE{eConnecting,eConnected,eDisconnected,eDisconnecting};
             void __SetState(ESTATE eState);
+            void __HandleRead(CTimestamp iTimestamp);
+            void __HandleWrite();
+            void __HandleClose();
+            void __HandleError();
+            void __SendInLoop(const std::string & rMessage);
+            void __ShutdownInLoop();
+
         private:
             CEventLoop * m_pLoop;
             std::string m_sName;
@@ -49,6 +61,9 @@ namespace neco
             CInetAddress m_iPeerAddr;
             CONNECTION_CALLBACK m_ifnConnectionCallback;
             MESSAGE_CALLBACK m_ifnMessageCallback;
+            CLOSE_CALLBACK m_ifnCloseCallback;
+            CBuffer m_iInputBuffer;
+            CBuffer m_iOutputBuffer;
         };
         typedef std::shared_ptr<CTcpConnection> C_TCP_CONNECTION_PTR;
     }

@@ -55,3 +55,8 @@ void CSocket::SetReuseAddr(bool bOn)
     int nOptVal = bOn ? 1:0;
     ::setsockopt(m_nSockFd,SOL_SOCKET,SO_REUSEADDR,&nOptVal, sizeof(nOptVal));
 }
+
+void CSocket::ShutdownWrite()
+{
+    sockets::ShutdownWrite(m_nSockFd);
+}

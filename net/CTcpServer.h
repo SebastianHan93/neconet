@@ -30,7 +30,7 @@ namespace neco
 
         private:
             void __NewConnection(int nSockFd,const CInetAddress &iPeerAddr);
-
+            void __RemoveConnection(const C_TCP_CONNECTION_PTR & iConn);
         private:
             typedef std::map<std::string,C_TCP_CONNECTION_PTR> CONNECTION_MAP;
             CEventLoop * m_pEventLoop;

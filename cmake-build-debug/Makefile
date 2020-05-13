@@ -393,6 +393,33 @@ net/CAcceptor.cpp.s:
 	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CAcceptor.cpp.s
 .PHONY : net/CAcceptor.cpp.s
 
+net/CBuffer.o: net/CBuffer.cpp.o
+
+.PHONY : net/CBuffer.o
+
+# target to build an object file
+net/CBuffer.cpp.o:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CBuffer.cpp.o
+.PHONY : net/CBuffer.cpp.o
+
+net/CBuffer.i: net/CBuffer.cpp.i
+
+.PHONY : net/CBuffer.i
+
+# target to preprocess a source file
+net/CBuffer.cpp.i:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CBuffer.cpp.i
+.PHONY : net/CBuffer.cpp.i
+
+net/CBuffer.s: net/CBuffer.cpp.s
+
+.PHONY : net/CBuffer.s
+
+# target to generate assembly for a file
+net/CBuffer.cpp.s:
+	$(MAKE) -f CMakeFiles/neconet.dir/build.make CMakeFiles/neconet.dir/net/CBuffer.cpp.s
+.PHONY : net/CBuffer.cpp.s
+
 net/CChannel.o: net/CChannel.cpp.o
 
 .PHONY : net/CChannel.o
@@ -756,6 +783,9 @@ help:
 	@echo "... net/CAcceptor.o"
 	@echo "... net/CAcceptor.i"
 	@echo "... net/CAcceptor.s"
+	@echo "... net/CBuffer.o"
+	@echo "... net/CBuffer.i"
+	@echo "... net/CBuffer.s"
 	@echo "... net/CChannel.o"
 	@echo "... net/CChannel.i"
 	@echo "... net/CChannel.s"

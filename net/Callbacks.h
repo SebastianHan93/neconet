@@ -7,6 +7,7 @@
 
 #include <functional>
 #include <memory>
+#include "../base/CTimestamp.h"
 
 namespace neco
 {
@@ -18,13 +19,14 @@ namespace neco
 
     namespace net
     {
+        class CBuffer;
         class CTcpConnection;
         typedef std::shared_ptr<CTcpConnection> C_TCP_CONNECTION_PTR;
 
         typedef std::function<void()> TIMER_CALL_BACK;
         typedef std::function<void (const C_TCP_CONNECTION_PTR&)> CONNECTION_CALLBACK;
-        typedef std::function<void (const C_TCP_CONNECTION_PTR&,const char * data,ssize_t len)> MESSAGE_CALLBACK;
-//        typedef std::function<void (const C_TCP_CONNECTION_PTR&)> CloseCallback;
+        typedef std::function<void (const C_TCP_CONNECTION_PTR&,CBuffer *,CTimestamp)> MESSAGE_CALLBACK;
+        typedef std::function<void (const C_TCP_CONNECTION_PTR&)> CLOSE_CALLBACK;
 
 //        typedef std::function<void (const C_TCP_CONNECTION_PTR&)> WriteCompleteCallback;
 //        typedef std::function<void (const C_TCP_CONNECTION_PTR&, size_t)> HighWaterMarkCallback;
